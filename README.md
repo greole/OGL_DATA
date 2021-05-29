@@ -7,7 +7,6 @@ This repository collects benchmarking data for the OGL library.
 The benchmark data is structured the following way.
 
 1. case (separate folder)
-2. size_variation (ie. mesh size or minimum iterations)
-3. applied solvers
-4. version ( eg. 0.1.0, 0.1.0-tag/commit of OGL)
-5. hardware ( eg. v100/xeon)
+2. OGL version or tag
+3. the device on which the data was generated
+4. a set of json files and OF logs
