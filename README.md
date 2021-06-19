@@ -1,6 +1,6 @@
 # OGL_DATA
 
-This repository collects benchmarking data for the [OGL](https://github.com/greole/OGL) library.
+This repository collects benchmarking data for the [OGL](https://github.com/greole/OGL) library. Benchmark results are generated with the [OBR](https://github.com/greole/OBR) scripts.
 
 # Structure
 
