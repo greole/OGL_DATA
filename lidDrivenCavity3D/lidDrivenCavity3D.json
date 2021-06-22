@@ -1,11 +1,14 @@
 {
+  "OBR": {
+    "version": "0.0.0"
+  },
   "openfoam":{
-    "solver":"dnsFoam",
-    "case": "boxTurb16",
-    "type": "OpenFOAMExeternalCase",
+    "solver": "icoFoam",
+    "case": "lidDrivenCavity3D",
+    "type": "OpenFOAMExternalCase",
     "origin": "~/code/hpc/Lid_driven_cavity-3d/S",
     "solver_stubs": {
-      "p" : [
+      "p": [
         "solver {solver};",
         "tolerance {tolerance};",
         "minIter {minIter};",
@@ -17,7 +20,7 @@
         "updateSysMatrix no;",
         "sort yes;"
       ],
-      "U" : [
+      "U": [
         "solver {solver};",
         "tolerance {tolerance};",
         "minIter {minIter};",
@@ -29,10 +32,15 @@
         "updateSysMatrix yes;",
         "sort yes;"
       ]
-     }
+     },
+    "controlDict": {
+      "stationary": true,
+      "timeSteps": 10
+    }
   },
   "variation": {
-      "name":"CellSetter",
-      "range": [10, 20, 40, 80]
+      "type": "ReBlockMesh",
+      "dimensions": "3d",
+      "range": [10, 20, 40, 80, 100]
   }
 }

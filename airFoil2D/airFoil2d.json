@@ -1,6 +1,9 @@
 {
-  "openfoam":{
-    "solver":"simpleFoam",
+  "OBR": {
+    "version": "0.0.0"
+  },
+  "openfoam": {
+    "solver": "simpleFoam",
     "case": "airFoil2D",
     "type": "OpenFOAMTutorialCase",
     "origin": "incompressible",
@@ -29,10 +32,15 @@
         "updateSysMatrix yes;",
         "sort yes;"
       ]
-     }
+    },
+    "controlDict": {
+      "stationary": true,
+      "timeSteps": 10
+    }
   },
   "variation": {
-      "type": "refineMesh",
-      "range": [1, 2, 3, 4]
+    "type": "RefineMesh",
+    "dimensions": 2,
+    "range": [0, 1, 2, 3]
   }
 }
