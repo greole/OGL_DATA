@@ -11,6 +11,7 @@ The benchmark data is structured the following way.
 3. Ginkgo version or tag
 3. the device on which the data was generated
 4. a set of csv files
+5. a subfolder folder for OpenFOAM log files for OpenFOAM runs and preprocessing steps
 
 # Using the provided scripts
 The simplest method to import the provided data_processing scripts is by adding the corresponding path to the sys.path
