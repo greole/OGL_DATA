@@ -1,0 +1,156 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-13d66902f78c
+Exec   : icoFoam
+Date   : Jun 26 2021
+Time   : 23:48:29
+Host   : "uc2n454.localdomain"
+PID    : 1992328
+I/O    : uncollated
+Case   : /pfs/data5/home/kit/scc/nq7776/code/OGL_DATA/lidDrivenCavity3D/v0.1-117-g6793da2/f584ccac99/IntelXeonGold6230CPU@2.10GHz/Test_2021-06-26-23:18:48/50/p-BiCGStab-GKO-BJ-omp/lidDrivenCavity3D
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.002
+
+Courant Number mean: 0 max: 0
+nonePBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0592055, No Iterations 5
+nonePBiCGStab:  Solving for Uy, Initial residual = 0, Final residual = 0, No Iterations 0
+nonePBiCGStab:  Solving for Uz, Initial residual = 0, Final residual = 0, No Iterations 0
+Gingko init_host_sparsity_pattern : 35 ms
+ matrix not stored update host matrix 
+Gingko update_host_mtx : 18 ms
+matrix is not yet sorted, compute sorting idxs 
+ compute sorting idxs 860000
+Gingko compute_sort : 991 ms
+matrix is not yet sorted,  sorting host matrix 
+Gingko sort_host_mtx_sparsity_pattern : 23 ms
+Gingko sort_host_mtx : 16 ms
+Gingko init_preconditioner : 18 ms
+Gingko solve : 3449 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for p, Initial residual = 0, Final residual = 9.53558e-07, No Iterations 281
+time step continuity errors : sum local = 2.92948e-09, global = -7.52993e-21, cumulative = -7.52993e-21
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 3294 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for p, Initial residual = 1, Final residual = 9.28234e-07, No Iterations 269
+time step continuity errors : sum local = 8.75379e-09, global = 2.10244e-20, cumulative = 1.34945e-20
+ExecutionTime = 15.21 s  ClockTime = 8 s
+
+Time = 0.004
+
+Courant Number mean: 0.0636233 max: 0.723792
+nonePBiCGStab:  Solving for Ux, Initial residual = 0.144135, Final residual = 0.02192, No Iterations 5
+nonePBiCGStab:  Solving for Uy, Initial residual = 0.363931, Final residual = 0.0522818, No Iterations 5
+nonePBiCGStab:  Solving for Uz, Initial residual = 0.973599, Final residual = 0.158926, No Iterations 5
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 3530 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for p, Initial residual = 0.676727, Final residual = 9.33355e-07, No Iterations 286
+time step continuity errors : sum local = 8.12129e-09, global = -1.33005e-20, cumulative = 1.94e-22
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 3120 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for p, Initial residual = 0.668514, Final residual = 9.48525e-07, No Iterations 255
+time step continuity errors : sum local = 5.31873e-09, global = 4.79654e-20, cumulative = 4.81594e-20
+ExecutionTime = 28.63 s  ClockTime = 15 s
+
+Time = 0.006
+
+Courant Number mean: 0.0972275 max: 0.862514
+nonePBiCGStab:  Solving for Ux, Initial residual = 0.0524164, Final residual = 0.00685505, No Iterations 5
+nonePBiCGStab:  Solving for Uy, Initial residual = 0.127053, Final residual = 0.0201192, No Iterations 5
+nonePBiCGStab:  Solving for Uz, Initial residual = 0.366622, Final residual = 0.0530642, No Iterations 5
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 3176 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for p, Initial residual = 0.584667, Final residual = 9.13179e-07, No Iterations 259
+time step continuity errors : sum local = 1.64284e-08, global = 8.69004e-21, cumulative = 5.68494e-20
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 3203 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for p, Initial residual = 0.594546, Final residual = 8.65736e-07, No Iterations 262
+time step continuity errors : sum local = 4.55738e-09, global = 3.94898e-20, cumulative = 9.63392e-20
+ExecutionTime = 41.5 s  ClockTime = 22 s
+
+Time = 0.008
+
+Courant Number mean: 0.113794 max: 0.88248
+nonePBiCGStab:  Solving for Ux, Initial residual = 0.0289598, Final residual = 0.00344526, No Iterations 5
+nonePBiCGStab:  Solving for Uy, Initial residual = 0.08442, Final residual = 0.0109195, No Iterations 5
+nonePBiCGStab:  Solving for Uz, Initial residual = 0.229209, Final residual = 0.0298148, No Iterations 5
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 2990 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for p, Initial residual = 0.5287, Final residual = 9.9632e-07, No Iterations 246
+time step continuity errors : sum local = 2.14847e-09, global = 4.62327e-20, cumulative = 1.42572e-19
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 3148 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for p, Initial residual = 0.41143, Final residual = 9.60894e-07, No Iterations 257
+time step continuity errors : sum local = 1.61802e-09, global = 6.73365e-20, cumulative = 2.09908e-19
+ExecutionTime = 53.88 s  ClockTime = 28 s
+
+Time = 0.01
+
+Courant Number mean: 0.127339 max: 0.898877
+nonePBiCGStab:  Solving for Ux, Initial residual = 0.0202772, Final residual = 0.00208478, No Iterations 5
+nonePBiCGStab:  Solving for Uy, Initial residual = 0.0505592, Final residual = 0.00623603, No Iterations 5
+nonePBiCGStab:  Solving for Uz, Initial residual = 0.112886, Final residual = 0.0180675, No Iterations 5
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 3080 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for p, Initial residual = 0.342695, Final residual = 9.62493e-07, No Iterations 253
+time step continuity errors : sum local = 2.91594e-09, global = 2.11609e-20, cumulative = 2.31069e-19
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 3113 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for p, Initial residual = 0.354047, Final residual = 4.77601e-07, No Iterations 254
+time step continuity errors : sum local = 1.84258e-09, global = -4.57455e-20, cumulative = 1.85324e-19
+ExecutionTime = 66.39 s  ClockTime = 34 s
+
+End
+
