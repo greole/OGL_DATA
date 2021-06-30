@@ -7,12 +7,12 @@
 \*---------------------------------------------------------------------------*/
 Build  : 8-13d66902f78c
 Exec   : icoFoam
-Date   : Jun 24 2021
-Time   : 10:44:58
-Host   : "uc2n489.localdomain"
-PID    : 3940866
+Date   : Jun 27 2021
+Time   : 23:04:51
+Host   : "uc2n484.localdomain"
+PID    : 1229259
 I/O    : uncollated
-Case   : /pfs/data5/home/kit/scc/nq7776/code/OGL_DATA/lidDrivenCavity3D/v0.1-113-g8300f3e/f584ccac99/TeslaV100-SXM2-32GB/Test_2021-06-24-10:42:04/50/p-CG-GKO-none-cuda/lidDrivenCavity3D
+Case   : /pfs/data5/home/kit/scc/nq7776/code/OGL_DATA/lidDrivenCavity3D/v0.1-118-gbd9d99d/f584ccac99/TeslaV100-SXM2-32GB/Test_2021-06-27-23:02:42/50/p-CG-GKO-none-cuda/lidDrivenCavity3D
 nProcs : 1
 sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
@@ -40,15 +40,15 @@ Courant Number mean: 0 max: 0
 nonePBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0592055, No Iterations 5
 nonePBiCGStab:  Solving for Uy, Initial residual = 0, Final residual = 0, No Iterations 0
 nonePBiCGStab:  Solving for Uz, Initial residual = 0, Final residual = 0, No Iterations 0
-Gingko init_host_sparsity_pattern : 42 ms
+Gingko init_host_sparsity_pattern : 33 ms
  matrix not stored update host matrix 
-Gingko update_host_mtx : 19 ms
+Gingko update_host_mtx : 18 ms
 matrix is not yet sorted, compute sorting idxs 
  compute sorting idxs 860000
-Gingko compute_sort : 1011 ms
+Gingko compute_sort : 1006 ms
 matrix is not yet sorted,  sorting host matrix 
 Gingko sort_host_mtx_sparsity_pattern : 23 ms
-Gingko sort_host_mtx : 12 ms
+Gingko sort_host_mtx : 13 ms
 Gingko init_preconditioner : 0 ms
  get_precond == NULL
 Gingko solve : 76 ms
@@ -58,12 +58,12 @@ nonecudaGKOCG:  Solving for p, Initial residual = 4e-08, Final residual = 9.4524
 time step continuity errors : sum local = 1.21255e-09, global = -2.3067e-20, cumulative = -2.3067e-20
 Gingko init_preconditioner : 0 ms
  get_precond == NULL
-Gingko solve : 75 ms
+Gingko solve : 74 ms
  copy back
  get iters 
 nonecudaGKOCG:  Solving for p, Initial residual = 1, Final residual = 9.30256e-07, No Iterations 441
 time step continuity errors : sum local = 1.68748e-09, global = -1.7766e-21, cumulative = -2.48436e-20
-ExecutionTime = 2.63 s  ClockTime = 2 s
+ExecutionTime = 2.65 s  ClockTime = 2 s
 
 Time = 0.004
 
@@ -80,7 +80,7 @@ nonecudaGKOCG:  Solving for p, Initial residual = 0.67673, Final residual = 9.77
 time step continuity errors : sum local = 2.23859e-09, global = -5.19349e-21, cumulative = -3.00371e-20
 Gingko init_preconditioner : 0 ms
  get_precond == NULL
-Gingko solve : 72 ms
+Gingko solve : 71 ms
  copy back
  get iters 
 nonecudaGKOCG:  Solving for p, Initial residual = 0.668507, Final residual = 8.56546e-07, No Iterations 425
@@ -102,12 +102,12 @@ nonecudaGKOCG:  Solving for p, Initial residual = 0.584655, Final residual = 9.0
 time step continuity errors : sum local = 1.43693e-09, global = 2.94897e-20, cumulative = 1.32698e-21
 Gingko init_preconditioner : 0 ms
  get_precond == NULL
-Gingko solve : 74 ms
+Gingko solve : 75 ms
  copy back
  get iters 
 nonecudaGKOCG:  Solving for p, Initial residual = 0.594544, Final residual = 8.85162e-07, No Iterations 428
 time step continuity errors : sum local = 1.36394e-09, global = 1.63748e-20, cumulative = 1.77018e-20
-ExecutionTime = 3.2 s  ClockTime = 3 s
+ExecutionTime = 3.21 s  ClockTime = 3 s
 
 Time = 0.008
 
@@ -117,19 +117,19 @@ nonePBiCGStab:  Solving for Uy, Initial residual = 0.0844255, Final residual = 0
 nonePBiCGStab:  Solving for Uz, Initial residual = 0.229192, Final residual = 0.0297663, No Iterations 5
 Gingko init_preconditioner : 0 ms
  get_precond == NULL
-Gingko solve : 69 ms
+Gingko solve : 70 ms
  copy back
  get iters 
 nonecudaGKOCG:  Solving for p, Initial residual = 0.528702, Final residual = 9.15192e-07, No Iterations 416
 time step continuity errors : sum local = 1.39482e-09, global = -1.46682e-20, cumulative = 3.03365e-21
 Gingko init_preconditioner : 0 ms
  get_precond == NULL
-Gingko solve : 69 ms
+Gingko solve : 71 ms
  copy back
  get iters 
 nonecudaGKOCG:  Solving for p, Initial residual = 0.411433, Final residual = 9.84719e-07, No Iterations 414
 time step continuity errors : sum local = 1.52877e-09, global = -9.04313e-21, cumulative = -6.00948e-21
-ExecutionTime = 3.49 s  ClockTime = 3 s
+ExecutionTime = 3.48 s  ClockTime = 3 s
 
 Time = 0.01
 

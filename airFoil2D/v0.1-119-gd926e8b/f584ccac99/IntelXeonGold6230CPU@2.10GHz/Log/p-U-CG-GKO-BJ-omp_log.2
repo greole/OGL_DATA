@@ -1,0 +1,256 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-13d66902f78c
+Exec   : simpleFoam
+Date   : Jun 29 2021
+Time   : 13:04:41
+Host   : "uc2n547.localdomain"
+PID    : 3141207
+I/O    : uncollated
+Case   : /pfs/data5/home/kit/scc/nq7776/code/OGL_DATA/airFoil2D/v0.1-119-gd926e8b/f584ccac99/IntelXeonGold6230CPU@2.10GHz/Test_2021-06-29-12:55:17/1/p-U-CG-GKO-BJ-omp/airFoil2D
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: Convergence criteria found
+        p: tolerance 1e-05
+        U: tolerance 1e-05
+        nuTilda: tolerance 1e-05
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model SpalartAllmaras
+Selecting patchDistMethod meshWave
+RAS
+{
+    model           SpalartAllmaras;
+    turbulence      on;
+    printCoeffs     on;
+    sigmaNut        0.66666;
+    kappa           0.41;
+    Cb1             0.1355;
+    Cb2             0.622;
+    Cw2             0.3;
+    Cw3             2;
+    Cv1             7.1;
+    Cs              0.3;
+}
+
+No MRF models present
+
+No finite volume options present
+
+Starting time loop
+
+Time = 1
+
+Gingko init_host_sparsity_pattern : 8 ms
+ matrix not stored update host matrix 
+Gingko update_host_mtx : 4 ms
+matrix is not yet sorted, compute sorting idxs 
+ compute sorting idxs 214288
+Gingko compute_sort : 226 ms
+matrix is not yet sorted,  sorting host matrix 
+Gingko sort_host_mtx_sparsity_pattern : 5 ms
+Gingko sort_host_mtx : 3 ms
+Gingko init_preconditioner : 6 ms
+Gingko solve : 119 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for Ux, Initial residual = -0, Final residual = 7.26213e-07, No Iterations 29
+Gingko init_host_sparsity_pattern : 8 ms
+ matrix not stored update host matrix 
+Gingko update_host_mtx : 4 ms
+matrix is not yet sorted,  sorting host matrix 
+Gingko sort_host_mtx_sparsity_pattern : 5 ms
+Gingko sort_host_mtx : 3 ms
+Gingko init_preconditioner : 6 ms
+Gingko solve : 117 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for Uy, Initial residual = 130.982, Final residual = 7.41617e-07, No Iterations 29
+Gingko init_host_sparsity_pattern : 7 ms
+ matrix not stored update host matrix 
+Gingko update_host_mtx : 4 ms
+matrix is not yet sorted,  sorting host matrix 
+Gingko sort_host_mtx_sparsity_pattern : 5 ms
+Gingko sort_host_mtx : 3 ms
+Gingko init_preconditioner : 6 ms
+ CG create  precond 
+Gingko solve : 2201 ms
+ copy back
+ get iters 
+BJompGKOCG:  Solving for p, Initial residual = 133.957, Final residual = 3.2288e-05, No Iterations 999
+time step continuity errors : sum local = 1.99118e-06, global = -2.31482e-08, cumulative = -2.31482e-08
+smoothSolver:  Solving for nuTilda, Initial residual = 1, Final residual = 0.0692675, No Iterations 2
+ExecutionTime = 5.55 s  ClockTime = 4 s
+
+Time = 2
+
+Gingko init_host_sparsity_pattern : 7 ms
+ matrix not stored update host matrix 
+Gingko update_host_mtx : 3 ms
+matrix is not yet sorted,  sorting host matrix 
+Gingko sort_host_mtx_sparsity_pattern : 6 ms
+Gingko sort_host_mtx : 3 ms
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 146 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 9.0874e-07, No Iterations 32
+Gingko init_host_sparsity_pattern : 7 ms
+ matrix not stored update host matrix 
+Gingko update_host_mtx : 3 ms
+matrix is not yet sorted,  sorting host matrix 
+Gingko sort_host_mtx_sparsity_pattern : 5 ms
+Gingko sort_host_mtx : 3 ms
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 128 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for Uy, Initial residual = 0.547354, Final residual = 8.85935e-07, No Iterations 28
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+ CG create  precond 
+Gingko solve : 2226 ms
+ copy back
+ get iters 
+BJompGKOCG:  Solving for p, Initial residual = 0.716651, Final residual = 1.22603e-05, No Iterations 999
+time step continuity errors : sum local = 0.00859074, global = 0.00404478, cumulative = 0.00404476
+smoothSolver:  Solving for nuTilda, Initial residual = 0.124201, Final residual = 0.00551493, No Iterations 4
+ExecutionTime = 10.65 s  ClockTime = 6 s
+
+Time = 3
+
+Gingko init_host_sparsity_pattern : 7 ms
+ matrix not stored update host matrix 
+Gingko update_host_mtx : 3 ms
+matrix is not yet sorted,  sorting host matrix 
+Gingko sort_host_mtx_sparsity_pattern : 5 ms
+Gingko sort_host_mtx : 3 ms
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 113 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for Ux, Initial residual = 0.173377, Final residual = 7.70014e-07, No Iterations 26
+Gingko init_host_sparsity_pattern : 8 ms
+ matrix not stored update host matrix 
+Gingko update_host_mtx : 4 ms
+matrix is not yet sorted,  sorting host matrix 
+Gingko sort_host_mtx_sparsity_pattern : 5 ms
+Gingko sort_host_mtx : 3 ms
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 92 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for Uy, Initial residual = 0.279293, Final residual = 9.1643e-07, No Iterations 21
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+ CG create  precond 
+Gingko solve : 2176 ms
+ copy back
+ get iters 
+BJompGKOCG:  Solving for p, Initial residual = 0.214144, Final residual = 6.4104e-06, No Iterations 999
+time step continuity errors : sum local = 0.0116848, global = 0.00534818, cumulative = 0.00939294
+smoothSolver:  Solving for nuTilda, Initial residual = 0.119541, Final residual = 0.00522744, No Iterations 4
+ExecutionTime = 15.5 s  ClockTime = 9 s
+
+Time = 4
+
+Gingko init_host_sparsity_pattern : 7 ms
+ matrix not stored update host matrix 
+Gingko update_host_mtx : 3 ms
+matrix is not yet sorted,  sorting host matrix 
+Gingko sort_host_mtx_sparsity_pattern : 5 ms
+Gingko sort_host_mtx : 3 ms
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 124 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for Ux, Initial residual = 0.14686, Final residual = 8.32718e-07, No Iterations 29
+Gingko init_host_sparsity_pattern : 8 ms
+ matrix not stored update host matrix 
+Gingko update_host_mtx : 3 ms
+matrix is not yet sorted,  sorting host matrix 
+Gingko sort_host_mtx_sparsity_pattern : 5 ms
+Gingko sort_host_mtx : 3 ms
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 130 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for Uy, Initial residual = 0.226577, Final residual = 9.59051e-07, No Iterations 30
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+ CG create  precond 
+Gingko solve : 2193 ms
+ copy back
+ get iters 
+BJompGKOCG:  Solving for p, Initial residual = 0.170574, Final residual = 5.66269e-06, No Iterations 999
+time step continuity errors : sum local = 0.012968, global = 0.00522271, cumulative = 0.0146157
+smoothSolver:  Solving for nuTilda, Initial residual = 0.125629, Final residual = 0.00567187, No Iterations 4
+bounding nuTilda, min: -0.108172 max: 0.349822 average: 0.139475
+ExecutionTime = 20.48 s  ClockTime = 11 s
+
+Time = 5
+
+Gingko init_host_sparsity_pattern : 7 ms
+ matrix not stored update host matrix 
+Gingko update_host_mtx : 3 ms
+matrix is not yet sorted,  sorting host matrix 
+Gingko sort_host_mtx_sparsity_pattern : 5 ms
+Gingko sort_host_mtx : 3 ms
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 185 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for Ux, Initial residual = 0.269478, Final residual = 9.21973e-07, No Iterations 43
+Gingko init_host_sparsity_pattern : 8 ms
+ matrix not stored update host matrix 
+Gingko update_host_mtx : 4 ms
+matrix is not yet sorted,  sorting host matrix 
+Gingko sort_host_mtx_sparsity_pattern : 5 ms
+Gingko sort_host_mtx : 3 ms
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+Gingko solve : 181 ms
+ copy back
+ get iters 
+BJompGKOBiCGStab:  Solving for Uy, Initial residual = 0.217049, Final residual = 8.13517e-07, No Iterations 42
+ found preconditioner 
+Gingko init_preconditioner : 0 ms
+ CG create  precond 
+Gingko solve : 2155 ms
+ copy back
+ get iters 
+BJompGKOCG:  Solving for p, Initial residual = 0.160036, Final residual = 1.21752e-05, No Iterations 999
+time step continuity errors : sum local = 1.88929, global = 0.00573821, cumulative = 0.0203539
+smoothSolver:  Solving for nuTilda, Initial residual = 0.0502917, Final residual = 0.0031985, No Iterations 22
+ExecutionTime = 25.62 s  ClockTime = 14 s
+
+End
+
