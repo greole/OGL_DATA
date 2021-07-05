@@ -28,7 +28,10 @@ The following figures show the impact of using BJ as preconditioner compared to 
 ## Speedup of Different Solver vs CG  with Ginkgo Backend
 The following figures show the relative execution time of different ginkgo solvers compared to CG.
 
-![figure](momentum-GKOSolver.png)
+###  Results for Poisson equation only
 
 ![figure](poisson-GKOSolver.png)
+
+###  Results for Poisson and Momentum equation
+![figure](momentum-GKOSolver.png)
 
