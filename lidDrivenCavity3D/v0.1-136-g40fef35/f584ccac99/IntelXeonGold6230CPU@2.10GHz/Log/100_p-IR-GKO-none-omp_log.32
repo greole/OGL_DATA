@@ -1,0 +1,126 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-13d66902f78c
+Exec   : icoFoam
+Date   : Jul 04 2021
+Time   : 10:01:10
+Host   : "uc2n390.localdomain"
+PID    : 2113249
+I/O    : uncollated
+Case   : /pfs/data5/home/kit/scc/nq7776/code/OGL_DATA/lidDrivenCavity3D/v0.1-136-g40fef35/f584ccac99/IntelXeonGold6230CPU@2.10GHz/Test_2021-07-04-07:26:56/100/p-IR-GKO-none-omp/lidDrivenCavity3D
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.001
+
+Courant Number mean: 0 max: 0
+nonePBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0818707, No Iterations 5
+nonePBiCGStab:  Solving for Uy, Initial residual = 0, Final residual = 0, No Iterations 0
+nonePBiCGStab:  Solving for Uz, Initial residual = 0, Final residual = 0, No Iterations 0
+[OGL LOG] init_host_sparsity_pattern : 287 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 148 ms
+[OGL LOG] matrix is not yet sorted, compute sorting idxs
+[OGL LOG] compute_sort : 9186 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 192 ms
+[OGL LOG] sort_host_mtx : 123 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 11188 ms
+noneompGKOIR:  Solving for p, Initial residual = 1, Final residual = 1.74997e-07, No Iterations 4
+time step continuity errors : sum local = 6.62786e-11, global = -2.08863e-20, cumulative = -2.08863e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 11725 ms
+noneompGKOIR:  Solving for p, Initial residual = 0.707485, Final residual = 9.58593e-08, No Iterations 4
+time step continuity errors : sum local = 5.02893e-11, global = 1.91761e-21, cumulative = -1.89687e-20
+ExecutionTime = 744.4 s  ClockTime = 38 s
+
+Time = 0.002
+
+Courant Number mean: 0.0422155 max: 0.791725
+nonePBiCGStab:  Solving for Ux, Initial residual = 0.137867, Final residual = 0.0400077, No Iterations 5
+nonePBiCGStab:  Solving for Uy, Initial residual = 0.451746, Final residual = 0.130142, No Iterations 5
+nonePBiCGStab:  Solving for Uz, Initial residual = 0.987526, Final residual = 0.323465, No Iterations 5
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 8742 ms
+noneompGKOIR:  Solving for p, Initial residual = 0.789699, Final residual = 4.43476e-08, No Iterations 4
+time step continuity errors : sum local = 4.04186e-11, global = -2.45137e-21, cumulative = -2.14201e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 8314 ms
+noneompGKOIR:  Solving for p, Initial residual = 0.713525, Final residual = 3.99141e-08, No Iterations 4
+time step continuity errors : sum local = 3.71005e-11, global = -2.2461e-21, cumulative = -2.36662e-20
+ExecutionTime = 1289.93 s  ClockTime = 56 s
+
+Time = 0.003
+
+Courant Number mean: 0.0674676 max: 0.89998
+nonePBiCGStab:  Solving for Ux, Initial residual = 0.0610629, Final residual = 0.0153012, No Iterations 5
+nonePBiCGStab:  Solving for Uy, Initial residual = 0.208727, Final residual = 0.0593992, No Iterations 5
+nonePBiCGStab:  Solving for Uz, Initial residual = 0.712489, Final residual = 0.213727, No Iterations 5
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 8198 ms
+noneompGKOIR:  Solving for p, Initial residual = 0.797066, Final residual = 4.35004e-08, No Iterations 4
+time step continuity errors : sum local = 3.1528e-11, global = -1.60486e-22, cumulative = -2.38266e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 8793 ms
+noneompGKOIR:  Solving for p, Initial residual = 0.724869, Final residual = 3.39281e-08, No Iterations 4
+time step continuity errors : sum local = 2.39767e-11, global = -2.80464e-21, cumulative = -2.66313e-20
+ExecutionTime = 1833.39 s  ClockTime = 75 s
+
+Time = 0.004
+
+Courant Number mean: 0.0814739 max: 0.91289
+nonePBiCGStab:  Solving for Ux, Initial residual = 0.0387865, Final residual = 0.0107239, No Iterations 5
+nonePBiCGStab:  Solving for Uy, Initial residual = 0.148965, Final residual = 0.0502054, No Iterations 5
+nonePBiCGStab:  Solving for Uz, Initial residual = 0.492866, Final residual = 0.135097, No Iterations 5
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 8945 ms
+noneompGKOIR:  Solving for p, Initial residual = 0.719472, Final residual = 3.48031e-08, No Iterations 4
+time step continuity errors : sum local = 2.6042e-11, global = -8.31396e-21, cumulative = -3.49452e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 8852 ms
+noneompGKOIR:  Solving for p, Initial residual = 0.619839, Final residual = 2.49251e-08, No Iterations 4
+time step continuity errors : sum local = 1.90859e-11, global = 2.08209e-21, cumulative = -3.28632e-20
+ExecutionTime = 2402.43 s  ClockTime = 94 s
+
+Time = 0.005
+
+Courant Number mean: 0.092279 max: 0.925557
+nonePBiCGStab:  Solving for Ux, Initial residual = 0.0298127, Final residual = 0.00896084, No Iterations 5
+nonePBiCGStab:  Solving for Uy, Initial residual = 0.0986418, Final residual = 0.0358093, No Iterations 5
+nonePBiCGStab:  Solving for Uz, Initial residual = 0.304828, Final residual = 0.0787277, No Iterations 5
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 8198 ms
+noneompGKOIR:  Solving for p, Initial residual = 0.757141, Final residual = 3.34361e-08, No Iterations 4
+time step continuity errors : sum local = 2.28465e-11, global = -2.89379e-21, cumulative = -3.57569e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 8419 ms
+noneompGKOIR:  Solving for p, Initial residual = 0.670842, Final residual = 2.53935e-08, No Iterations 4
+time step continuity errors : sum local = 1.71461e-11, global = 3.03252e-21, cumulative = -3.27244e-20
+ExecutionTime = 2933.78 s  ClockTime = 112 s
+
+End
+
