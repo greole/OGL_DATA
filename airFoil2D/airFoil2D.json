@@ -3,12 +3,12 @@
     "version": "0.0.0"
   },
   "openfoam":{
-    "solver": "icoFoam",
-    "case": "lidDrivenCavity3D",
-    "type": "OpenFOAMExternalCase",
-    "origin": "/home/kit/scc/nq7776/code/hpc/Lid_driven_cavity-3d/S",
+    "solver":"simpleFoam",
+    "case": "airFoil2D",
+    "type": "OpenFOAMTutorialCase",
+    "origin": "incompressible",
     "solver_stubs": {
-      "p": [
+      "p" : [
         "solver {solver};",
         "tolerance {tolerance};",
         "minIter {minIter};",
@@ -16,11 +16,11 @@
         "executor {executor};",
         "preconditioner {preconditioner};",
         "smoother none;",
-        "relTol 0.0;",
-        "updateSysMatrix no;",
+        "relTol 0.001;",
+        "updateSysMatrix yes;",
         "sort yes;"
       ],
-      "U": [
+      "U" : [
         "solver {solver};",
         "tolerance {tolerance};",
         "minIter {minIter};",
@@ -28,19 +28,19 @@
         "executor {executor};",
         "preconditioner {preconditioner};",
         "smoother none;",
-        "relTol 0.0;",
+        "relTol 0.001;",
         "updateSysMatrix yes;",
         "sort yes;"
       ]
      },
     "controlDict": {
-      "stationary": false,
+      "stationary": true,
       "timeSteps": 5
     }
   },
   "variation": {
-      "type": "ReBlockMesh",
-      "dimensions": "3d",
-      "range": [25, 50, 75, 100]
+      "type": "RefineMesh",
+      "dimensions": 2,
+      "range": [0, 1, 2, 3]
   }
 }
