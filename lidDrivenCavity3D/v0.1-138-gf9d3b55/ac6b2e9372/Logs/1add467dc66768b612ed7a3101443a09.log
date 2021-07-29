@@ -1,0 +1,71 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam
+Date   : Jul 28 2021
+Time   : 22:17:22
+Host   : "uc2n441.localdomain"
+PID    : 3233514
+I/O    : uncollated
+Case   : /pfs/data5/home/kit/scc/nq7776/code/OBR/lidDrivenCavity3D/Variation_mesh/90/Variation_matrix_solver/BiCGStab_NoPrecond_OMP/base
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.001
+
+Courant Number mean: 0 max: 0
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.00485432, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 357329
+[OGL LOG] init_host_sparsity_pattern : 212 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 110 ms
+[OGL LOG] matrix is not yet sorted, compute sorting idxs
+[OGL LOG] compute_sort : 6669 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 158 ms
+[OGL LOG] sort_host_mtx : 90 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 11011 ms
+noneompGKOBiCGStab:  Solving for p, Initial residual = 1, Final residual = 8.46833e-05, No Iterations 570
+linear solve p 18412116
+time step continuity errors : sum local = 1.5615e-06, global = 2.65769e-20, cumulative = 2.65769e-20
+[OGL LOG] init_host_sparsity_pattern : 205 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 113 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 161 ms
+[OGL LOG] sort_host_mtx : 90 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 9618 ms
+noneompGKOBiCGStab:  Solving for p, Initial residual = 0.764074, Final residual = 9.22093e-05, No Iterations 569
+linear solve p 10315424
+time step continuity errors : sum local = 7.27867e-06, global = 1.88894e-21, cumulative = 2.84658e-20
+ExecutionTime = 114.38 s  ClockTime = 33 s
+
+End
+
