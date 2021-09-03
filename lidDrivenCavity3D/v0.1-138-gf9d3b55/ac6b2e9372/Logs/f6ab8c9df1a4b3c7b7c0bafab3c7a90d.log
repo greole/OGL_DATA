@@ -1,0 +1,350 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam
+Date   : Jul 29 2021
+Time   : 02:49:49
+Host   : "uc2n489.localdomain"
+PID    : 3411877
+I/O    : uncollated
+Case   : /pfs/data5/home/kit/scc/nq7776/code/OBR/lidDrivenCavity3D/Variation_mesh/40/Variation_matrix_solver/BiCGStab_BJ_CUDA/base
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.001
+
+Courant Number mean: 0 max: 0
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 1.19415e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 26245
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, compute sorting idxs
+[OGL LOG] compute_sort : 484 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 7 ms
+[OGL LOG] solve : 59 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 1, Final residual = 4.72123e-05, No Iterations 199
+linear solve p 1332349
+time step continuity errors : sum local = 5.33203e-08, global = -1.07718e-20, cumulative = -1.07718e-20
+[OGL LOG] init_host_sparsity_pattern : 17 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 9 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 12 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 60 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.607573, Final residual = 3.52164e-05, No Iterations 193
+linear solve p 110415
+time step continuity errors : sum local = 4.79741e-08, global = -3.1681e-22, cumulative = -1.10886e-20
+ExecutionTime = 1.73 s  ClockTime = 2 s
+
+Time = 0.002
+
+Courant Number mean: 0.021382 max: 0.237104
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.179147, Final residual = 2.29016e-06, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.290814, Final residual = 3.23187e-06, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.956576, Final residual = 1.25116e-05, No Iterations 5
+linear solve U 47114
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 55 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.459275, Final residual = 9.0519e-05, No Iterations 186
+linear solve p 102587
+time step continuity errors : sum local = 1.05475e-07, global = 5.61118e-21, cumulative = -5.47738e-21
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 49 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.363839, Final residual = 4.16492e-05, No Iterations 166
+linear solve p 96779
+time step continuity errors : sum local = 4.17394e-08, global = -1.09232e-20, cumulative = -1.64006e-20
+ExecutionTime = 2 s  ClockTime = 2 s
+
+Time = 0.003
+
+Courant Number mean: 0.0325214 max: 0.306673
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0648737, Final residual = 7.63945e-07, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.105193, Final residual = 6.05258e-07, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.153195, Final residual = 1.93191e-06, No Iterations 5
+linear solve U 46768
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 13 ms
+[OGL LOG] sort_host_mtx : 7 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 20 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.164594, Final residual = 8.56209e-05, No Iterations 67
+linear solve p 71196
+time step continuity errors : sum local = 1.00386e-07, global = 3.39052e-21, cumulative = -1.30101e-20
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 22 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.129887, Final residual = 9.74761e-05, No Iterations 74
+linear solve p 70129
+time step continuity errors : sum local = 7.65256e-08, global = -1.53017e-20, cumulative = -2.83117e-20
+ExecutionTime = 2.22 s  ClockTime = 3 s
+
+Time = 0.004
+
+Courant Number mean: 0.0391013 max: 0.328165
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0380064, Final residual = 2.89249e-07, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.0657864, Final residual = 3.04332e-07, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.107938, Final residual = 6.90925e-07, No Iterations 5
+linear solve U 46971
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 22 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0839058, Final residual = 7.39624e-05, No Iterations 72
+linear solve p 69470
+time step continuity errors : sum local = 7.71011e-08, global = 1.04979e-20, cumulative = -1.78139e-20
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 21 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0654054, Final residual = 9.882e-05, No Iterations 69
+linear solve p 68429
+time step continuity errors : sum local = 7.74514e-08, global = -6.9347e-21, cumulative = -2.47486e-20
+ExecutionTime = 2.44 s  ClockTime = 3 s
+
+Time = 0.005
+
+Courant Number mean: 0.0438792 max: 0.338387
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0263918, Final residual = 7.83001e-08, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.0456492, Final residual = 1.71935e-07, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0758552, Final residual = 2.94369e-07, No Iterations 5
+linear solve U 46557
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 22 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0441326, Final residual = 8.72632e-05, No Iterations 65
+linear solve p 70160
+time step continuity errors : sum local = 8.16849e-08, global = -2.57985e-21, cumulative = -2.73284e-20
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 12 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 19 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0357505, Final residual = 8.62343e-05, No Iterations 61
+linear solve p 66608
+time step continuity errors : sum local = 7.09698e-08, global = 3.25871e-21, cumulative = -2.40697e-20
+ExecutionTime = 2.67 s  ClockTime = 3 s
+
+Time = 0.006
+
+Courant Number mean: 0.0475597 max: 0.344477
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0199623, Final residual = 3.55152e-08, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.0349264, Final residual = 8.01314e-08, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0592317, Final residual = 1.91178e-07, No Iterations 5
+linear solve U 46985
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 20 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0295533, Final residual = 9.26324e-05, No Iterations 66
+linear solve p 67566
+time step continuity errors : sum local = 8.24138e-08, global = -8.89489e-21, cumulative = -3.29646e-20
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 18 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0242996, Final residual = 9.90509e-05, No Iterations 58
+linear solve p 65280
+time step continuity errors : sum local = 8.0488e-08, global = -1.85796e-20, cumulative = -5.15443e-20
+ExecutionTime = 2.87 s  ClockTime = 3 s
+
+Time = 0.007
+
+Courant Number mean: 0.0505735 max: 0.348643
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0158463, Final residual = 2.12425e-08, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.0279727, Final residual = 5.87305e-08, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0486756, Final residual = 1.33828e-07, No Iterations 5
+linear solve U 46936
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 19 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0230408, Final residual = 9.6011e-05, No Iterations 62
+linear solve p 66346
+time step continuity errors : sum local = 8.32713e-08, global = -9.27895e-21, cumulative = -6.08232e-20
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 20 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0193232, Final residual = 8.93022e-05, No Iterations 58
+linear solve p 67585
+time step continuity errors : sum local = 7.54653e-08, global = 2.00011e-20, cumulative = -4.08221e-20
+ExecutionTime = 3.09 s  ClockTime = 3 s
+
+Time = 0.008
+
+Courant Number mean: 0.0531127 max: 0.351703
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0130169, Final residual = 1.50845e-08, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.0231253, Final residual = 3.73911e-08, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0412979, Final residual = 1.11022e-07, No Iterations 5
+linear solve U 46944
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 19 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0180692, Final residual = 7.69373e-05, No Iterations 61
+linear solve p 66067
+time step continuity errors : sum local = 7.18563e-08, global = -1.15866e-20, cumulative = -5.24087e-20
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 17 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0152979, Final residual = 9.81609e-05, No Iterations 57
+linear solve p 65199
+time step continuity errors : sum local = 8.22716e-08, global = -3.24136e-20, cumulative = -8.48223e-20
+ExecutionTime = 3.3 s  ClockTime = 4 s
+
+Time = 0.009
+
+Courant Number mean: 0.05527 max: 0.35407
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0109282, Final residual = 1.13619e-08, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.0195611, Final residual = 2.84628e-08, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0357324, Final residual = 9.5218e-08, No Iterations 5
+linear solve U 46887
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 18 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0153574, Final residual = 6.16378e-05, No Iterations 58
+linear solve p 65627
+time step continuity errors : sum local = 6.18884e-08, global = -3.1186e-20, cumulative = -1.16008e-19
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 18 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0130468, Final residual = 9.48507e-05, No Iterations 59
+linear solve p 65598
+time step continuity errors : sum local = 8.088e-08, global = -2.78978e-21, cumulative = -1.18798e-19
+ExecutionTime = 3.51 s  ClockTime = 4 s
+
+Time = 0.01
+
+Courant Number mean: 0.0571258 max: 0.35596
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.00934183, Final residual = 9.08273e-09, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.0168073, Final residual = 2.10604e-08, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0313433, Final residual = 8.38919e-08, No Iterations 5
+linear solve U 48400
+[OGL LOG] init_host_sparsity_pattern : 17 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 12 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 18 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0130088, Final residual = 9.0575e-05, No Iterations 60
+linear solve p 67766
+time step continuity errors : sum local = 8.09549e-08, global = -3.25788e-21, cumulative = -1.22056e-19
+[OGL LOG] init_host_sparsity_pattern : 16 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 11 ms
+[OGL LOG] sort_host_mtx : 6 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 17 ms
+BJcudaGKOBiCGStab:  Solving for p, Initial residual = 0.0111069, Final residual = 9.18927e-05, No Iterations 56
+linear solve p 64869
+time step continuity errors : sum local = 7.99548e-08, global = 2.3954e-20, cumulative = -9.81019e-20
+ExecutionTime = 3.72 s  ClockTime = 4 s
+
+End
+
