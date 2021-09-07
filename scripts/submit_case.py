@@ -126,6 +126,6 @@ if __name__ == "__main__":
                 script = write_script(queue, "lidDrivenCavity3D", e, t)
                 #print(check_output(["sbatch", "-p", partition, script]))
         else:
-            script = write_script("lidDrivenCavity3D", e)
+            script = write_script(queue, "lidDrivenCavity3D", e)
             print(check_output(["sbatch", "-p", partition, script]))
             partition = "gpu_4" if e == "CUDA" else "single"
