@@ -20,30 +20,40 @@ from pathlib import Path
 
 header = {
     "general": {
-        "pre": """
+        "pre":
+        """
 source ~/OpenFOAM/OpenFOAM-8/etc/bashrc
 cd {}
         """,
-        "base_path": "~/data/code",
-        "set_threads": "OMP_NUM_THREADS={}",
-        "ogl_location":  "OGL",
-        "ogl_data_location":  "OGL_DATA",
-        "obr_location":  "OBR",
-        "cmd": "time python obr_benchmark_cases.py --filter={} --folder {} --results_folder={} --report results_{}{}.csv",
+        "base_path":
+        "~/data/code",
+        "set_threads":
+        "OMP_NUM_THREADS={}",
+        "ogl_location":
+        "OGL",
+        "ogl_data_location":
+        "OGL_DATA",
+        "obr_location":
+        "OBR",
+        "cmd":
+        "time python obr_benchmark_cases.py --filter={} --folder {} --results_folder={} --report results_{}{}.csv",
     },
     "local": {
         "header": "#!/bin/bash\n",
         "module_loads": ""
-              },
+    },
     "slurm": {
-        "header": """#!/bin/bash
+        "header":
+        """#!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=40
 #SBATCH --time=02:00:00
 #SBATCH --job-name={}
 """,
-        "header_gpu": "#SBATCH --gpus-per-node=1",
-        "module_loads": """
+        "header_gpu":
+        "#SBATCH --gpus-per-node=1",
+        "module_loads":
+        """
 time_stamp=$(date +%Y-%m-%d-%T)
 module load compiler/gnu/9.3
 module load devel/cuda/11.0
@@ -53,33 +63,37 @@ module load toolkit/oneAPI/mpi/2021.1.1
     "pbs": {
         "header": "#PBS -l  nodes=1:gen9:ppn=2",
     },
-          }
+}
 
 executor_avail = ["OMP", "CUDA", "Serial", "HIP", "DPCPP"]
+
 
 def write_script(queue, case, executor, omp_threads=0):
     from copy import deepcopy
     print(executor)
     executors = deepcopy(executor_avail)
     executors.remove(executor)
-    describe_cmd = ["git", "describe", "--abbrev", "--tags", "--always", "--dirty"]
+    describe_cmd = [
+        "git", "describe", "--abbrev", "--tags", "--always", "--dirty"
+    ]
 
     base_path = Path(header["general"]["base_path"])
     obr_path = base_path / header["general"]["obr_location"]
 
     gko_version = check_output(
-            describe_cmd,cwd=(base_path / "ginkgo").expanduser()).decode("utf-8").replace("\n","")
+        describe_cmd,
+        cwd=(base_path / "ginkgo").expanduser()).decode("utf-8").replace(
+            "\n", "")
 
     ogl_version = check_output(
-            describe_cmd,cwd=(base_path / header["general"]["ogl_location"]).expanduser()).decode("utf-8").replace("\n","")
+        describe_cmd,
+        cwd=(base_path / header["general"]["ogl_location"]
+             ).expanduser()).decode("utf-8").replace("\n", "")
 
-    results_path = Path(header["general"]["base_path"] + "/" +
-                                      header["general"]["ogl_data_location"] +
-                                      "/{}/{}/{}"
-                                      .format(case,
-                                              ogl_version,
-                                              gko_version)).expanduser()
-
+    results_path = Path(
+        header["general"]["base_path"] + "/" +
+        header["general"]["ogl_data_location"] +
+        "/{}/{}/{}".format(case, ogl_version, gko_version)).expanduser()
 
     # create ogl data directory
     check_output(["mkdir", "-p", results_path])
@@ -96,24 +110,19 @@ def write_script(queue, case, executor, omp_threads=0):
         if omp_threads:
             fh.write(header["general"]["set_threads"].format(omp_threads))
         fh.write(header["general"]["pre"].format(obr_path))
-        fh.write(header["general"]["cmd"].format(
-            ",".join(executors),
-            case,
-            results_path,
-            executor,
-            omp
-            ))
+        fh.write(header["general"]["cmd"].format(",".join(executors), case,
+                                                 results_path, executor, omp))
     return fn
+
 
 if __name__ == "__main__":
     arguments = docopt(__doc__, version="0.1.0")
     executor = arguments["--executor"].split(",")
     queue = arguments["--queue"]
 
-
     for e in executor:
         if e == "OMP":
-            for t in  [1,2,4,5,8,10,16,20,32,40]:
+            for t in [1, 2, 4, 5, 8, 10, 16, 20, 32, 40]:
                 script = write_script(queue, "lidDrivenCavity3D", e, t)
                 #print(check_output(["sbatch", "-p", partition, script]))
         else:
