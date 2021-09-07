@@ -11,6 +11,7 @@
         -v --version        Print version and exit
         --queue=<queue>     Which queue manager is used [default: local].
         --executor=<execs>  A list of executor [default: Serial].
+        --write_only        Whether to write a job script only
 """
 
 from docopt import docopt
@@ -127,5 +128,6 @@ if __name__ == "__main__":
                 #print(check_output(["sbatch", "-p", partition, script]))
         else:
             script = write_script(queue, "lidDrivenCavity3D", e)
-            print(check_output(["sbatch", "-p", partition, script]))
-            partition = "gpu_4" if e == "CUDA" else "single"
+            if not arguments["--write_only"]:
+                print(check_output(["sbatch", "-p", partition, script]))
+                partition = "gpu_4" if e == "CUDA" else "single"
