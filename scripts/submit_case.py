@@ -96,7 +96,7 @@ def write_script(queue, case, executor, omp_threads=0):
         if omp_threads:
             fh.write(header["general"]["set_threads"].format(omp_threads))
         fh.write(header["general"]["pre"].format(obr_path))
-        fh.write(header["general"]cmd"].format(
+        fh.write(header["general"]["cmd"].format(
             ",".join(executors),
             case,
             results_path,
