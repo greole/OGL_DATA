@@ -1,0 +1,236 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam
+Date   : Sep 15 2021
+Time   : 14:26:50
+Host   : "uc2n482.localdomain"
+PID    : 3649990
+I/O    : uncollated
+Case   : /pfs/data5/home/kit/scc/nq7776/data/code/OBR/lidDrivenCavity3D/Variation_init/100/Variation_mesh/100/Variation_matrix_solver/IR_NoPrecond_CUDA/Variation_innerReductionFactor/0.01/1631708773
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.001
+
+Courant Number mean: 0.171005 max: 0.964718
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.00221104, Final residual = 2.10455e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00671465, Final residual = 5.53885e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0303966, Final residual = 0.000635532, No Iterations 5
+linear solve U 1093639
+[OGL LOG] init_host_sparsity_pattern : 290 ms
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 158 ms
+[OGL LOG] matrix is not yet sorted, compute sorting idxs
+[OGL LOG] compute_sort : 9499 ms
+[OGL LOG] matrix is not yet sorted, sorting host matrix
+[OGL LOG] sort_host_mtx_sparsity_pattern : 205 ms
+[OGL LOG] sort_host_mtx : 113 ms
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 479 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.148074, Final residual = 2.80738e-07, No Iterations 3
+linear solve p 11583039
+time step continuity errors : sum local = 8.97143e-11, global = -8.88067e-21, cumulative = -8.88067e-21
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 480 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.126694, Final residual = 2.30091e-07, No Iterations 3
+linear solve p 512466
+time step continuity errors : sum local = 7.36546e-11, global = 2.02084e-20, cumulative = 1.13277e-20
+ExecutionTime = 18.21 s  ClockTime = 19 s
+
+Time = 0.002
+
+Courant Number mean: 0.172431 max: 0.965079
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.00200108, Final residual = 1.87329e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.0060433, Final residual = 4.75884e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0264602, Final residual = 0.000565288, No Iterations 5
+linear solve U 1074585
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 537 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.132747, Final residual = 2.48974e-07, No Iterations 3
+linear solve p 570337
+time step continuity errors : sum local = 4.03132e-08, global = 1.08559e-20, cumulative = 2.21836e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 537 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.113614, Final residual = 2.10222e-07, No Iterations 3
+linear solve p 569240
+time step continuity errors : sum local = 4.03682e-08, global = -1.46903e-20, cumulative = 7.49323e-21
+ExecutionTime = 21.02 s  ClockTime = 21 s
+
+Time = 0.003
+
+Courant Number mean: 0.173747 max: 0.965402
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.00178538, Final residual = 1.36893e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00542563, Final residual = 3.58985e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0226278, Final residual = 0.000473544, No Iterations 5
+linear solve U 1069595
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 510 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.115648, Final residual = 2.07502e-07, No Iterations 3
+linear solve p 542029
+time step continuity errors : sum local = 4.04296e-08, global = 5.49157e-21, cumulative = 1.29848e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 513 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0996553, Final residual = 1.74508e-07, No Iterations 3
+linear solve p 545338
+time step continuity errors : sum local = 4.03712e-08, global = 1.51718e-20, cumulative = 2.81566e-20
+ExecutionTime = 23.77 s  ClockTime = 24 s
+
+Time = 0.004
+
+Courant Number mean: 0.174968 max: 0.965699
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.00162106, Final residual = 1.17385e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00491232, Final residual = 2.98286e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0199435, Final residual = 0.000417674, No Iterations 5
+linear solve U 1061175
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 538 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.102855, Final residual = 1.87012e-07, No Iterations 3
+linear solve p 570595
+time step continuity errors : sum local = 4.03409e-08, global = 1.59853e-20, cumulative = 4.41419e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 542 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0887992, Final residual = 1.58649e-07, No Iterations 3
+linear solve p 574762
+time step continuity errors : sum local = 4.03589e-08, global = 1.01188e-20, cumulative = 5.42607e-20
+ExecutionTime = 26.58 s  ClockTime = 27 s
+
+Time = 0.005
+
+Courant Number mean: 0.176093 max: 0.965959
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.00147175, Final residual = 1.01483e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00446502, Final residual = 2.56143e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0171717, Final residual = 0.000346346, No Iterations 5
+linear solve U 1055246
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 516 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0910048, Final residual = 1.55673e-07, No Iterations 3
+linear solve p 551082
+time step continuity errors : sum local = 4.03931e-08, global = -5.91207e-21, cumulative = 4.83486e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 512 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0783624, Final residual = 1.37295e-07, No Iterations 3
+linear solve p 544285
+time step continuity errors : sum local = 4.03577e-08, global = -3.3737e-21, cumulative = 4.49749e-20
+ExecutionTime = 29.35 s  ClockTime = 30 s
+
+Time = 0.006
+
+Courant Number mean: 0.177137 max: 0.966208
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0013447, Final residual = 8.7651e-06, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00407366, Final residual = 2.14991e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0152807, Final residual = 0.000303042, No Iterations 5
+linear solve U 1065052
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 538 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0807563, Final residual = 1.40824e-07, No Iterations 3
+linear solve p 570719
+time step continuity errors : sum local = 4.03359e-08, global = 4.87409e-21, cumulative = 4.9849e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 542 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0696028, Final residual = 1.17807e-07, No Iterations 3
+linear solve p 574736
+time step continuity errors : sum local = 4.03475e-08, global = -1.19681e-20, cumulative = 3.78808e-20
+ExecutionTime = 32.16 s  ClockTime = 33 s
+
+Time = 0.007
+
+Courant Number mean: 0.178102 max: 0.966418
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0012264, Final residual = 7.64881e-06, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00371957, Final residual = 1.89645e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.013235, Final residual = 0.000248067, No Iterations 5
+linear solve U 1064092
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 514 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0717593, Final residual = 1.21793e-07, No Iterations 3
+linear solve p 546127
+time step continuity errors : sum local = 4.03718e-08, global = -1.1567e-21, cumulative = 3.67241e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 514 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0617188, Final residual = 1.0334e-07, No Iterations 3
+linear solve p 547137
+time step continuity errors : sum local = 4.03468e-08, global = -6.39519e-21, cumulative = 3.0329e-20
+ExecutionTime = 34.91 s  ClockTime = 35 s
+
+Time = 0.008
+
+Courant Number mean: 0.179 max: 0.966628
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0011259, Final residual = 6.62635e-06, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00341336, Final residual = 1.60693e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0118631, Final residual = 0.000215825, No Iterations 5
+linear solve U 1050365
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 538 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0635255, Final residual = 1.07221e-07, No Iterations 3
+linear solve p 573733
+time step continuity errors : sum local = 4.03323e-08, global = -2.34181e-21, cumulative = 2.79872e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 538 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0546641, Final residual = 9.08872e-08, No Iterations 3
+linear solve p 570256
+time step continuity errors : sum local = 4.03406e-08, global = -8.28489e-21, cumulative = 1.97023e-20
+ExecutionTime = 37.7 s  ClockTime = 38 s
+
+Time = 0.009
+
+Courant Number mean: 0.17983 max: 0.966798
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.00103087, Final residual = 5.80628e-06, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00312803, Final residual = 1.44167e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.0103359, Final residual = 0.000173925, No Iterations 5
+linear solve U 1061849
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 514 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0566852, Final residual = 8.86267e-08, No Iterations 3
+linear solve p 547359
+time step continuity errors : sum local = 4.03552e-08, global = 1.66163e-21, cumulative = 2.13639e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 514 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0487032, Final residual = 8.08019e-08, No Iterations 3
+linear solve p 545747
+time step continuity errors : sum local = 4.03398e-08, global = -1.5518e-22, cumulative = 2.12087e-20
+ExecutionTime = 40.44 s  ClockTime = 41 s
+
+Time = 0.01
+
+Courant Number mean: 0.180604 max: 0.966976
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.000950171, Final residual = 5.0457e-06, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00288492, Final residual = 1.23314e-05, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.00931966, Final residual = 0.000151095, No Iterations 5
+linear solve U 1069916
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 534 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0500858, Final residual = 8.01309e-08, No Iterations 3
+linear solve p 566442
+time step continuity errors : sum local = 4.03289e-08, global = 5.57852e-21, cumulative = 2.67872e-20
+[OGL LOG] init_preconditioner : 0 ms
+[OGL LOG] solve : 536 ms
+nonecudaGKOIR:  Solving for p, Initial residual = 0.0430421, Final residual = 6.71918e-08, No Iterations 3
+linear solve p 567978
+time step continuity errors : sum local = 4.03343e-08, global = -7.50792e-21, cumulative = 1.92793e-20
+ExecutionTime = 43.24 s  ClockTime = 44 s
+
+End
+
