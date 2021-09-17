@@ -25,7 +25,7 @@ header = {
         """
 source ~/OpenFOAM/OpenFOAM-8/etc/bashrc
 cd {}
-        """,
+""",
         "base_path":
         "~/data/code",
         "set_threads":
@@ -37,7 +37,7 @@ cd {}
         "obr_location":
         "OBR",
         "cmd":
-        "time python obr_benchmark_cases.py --filter={} --folder {} --results_folder={} --report results_{}{}.csv",
+        "time python obr_benchmark_cases.py --filter={} --folder {} --results_folder={} --report results_{}{}.csv --continue_on_failure=True",
     },
     "local": {
         "header": "#!/bin/bash\n",
@@ -48,7 +48,7 @@ cd {}
         """#!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=40
-#SBATCH --time=02:00:00
+#SBATCH --time=04:00:00
 #SBATCH --job-name={}
 """,
         "header_gpu":
