@@ -5,6 +5,42 @@ import Owls as ow
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import savefig
 
+def compute_speedup_vs_OF_same_solver(df):
+    df = odp.idx_query(df, "preconditioner", "none")
+    reference = odp.idx_query(df, "backend", "OF")
+
+    res = df.groupby(level="backend").apply(
+        lambda x: reference.loc["reference"].loc["OF"]/x
+    )
+    # FIXME for now we change the backend of mpi results to GKO to avoid dropping the data
+    #print(res)
+    # the above introduced some extra index columns
+    res.index = res.index.droplevel(0)
+    #res = res[res.index.get_level_values("backend") != "OF"] 
+    return res.dropna()
+
+def compute_speedup(df, ref, drop_indices=None):
+    """ compute and return the speedup compared to a reference """
+    from copy import deepcopy
+    df = deepcopy(df)
+    if drop_indices:
+        for idx in drop_indices:
+            df.index = df.index.droplevel(idx)
+            
+    reference = odp.idx_query(df, ref[0], ref[1])
+    reference.index = reference.index.droplevel([ref[0]])
+    
+    def dropped_divide(df):
+        from copy import deepcopy
+        df = deepcopy(df)
+        df.index = df.index.droplevel(ref[0])
+        return df
+    
+    res = df.groupby(level=ref[0]).apply(
+        lambda x: reference/dropped_divide(x)
+    )
+    return res#.dropna()
+
 
 def get_ogl_versions(df):
     """read ogl_version."""
