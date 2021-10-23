@@ -5,42 +5,6 @@ import Owls as ow
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import savefig
 
-def compute_speedup_vs_OF_same_solver(df):
-    df = odp.idx_query(df, "preconditioner", "none")
-    reference = odp.idx_query(df, "backend", "OF")
-
-    res = df.groupby(level="backend").apply(
-        lambda x: reference.loc["reference"].loc["OF"]/x
-    )
-    # FIXME for now we change the backend of mpi results to GKO to avoid dropping the data
-    #print(res)
-    # the above introduced some extra index columns
-    res.index = res.index.droplevel(0)
-    #res = res[res.index.get_level_values("backend") != "OF"] 
-    return res.dropna()
-
-def compute_speedup(df, ref, drop_indices=None):
-    """ compute and return the speedup compared to a reference """
-    from copy import deepcopy
-    df = deepcopy(df)
-    if drop_indices:
-        for idx in drop_indices:
-            df.index = df.index.droplevel(idx)
-            
-    reference = odp.idx_query(df, ref[0], ref[1])
-    reference.index = reference.index.droplevel([ref[0]])
-    
-    def dropped_divide(df):
-        from copy import deepcopy
-        df = deepcopy(df)
-        df.index = df.index.droplevel(ref[0])
-        return df
-    
-    res = df.groupby(level=ref[0]).apply(
-        lambda x: reference/dropped_divide(x)
-    )
-    return res#.dropna()
-
 
 def get_ogl_versions(df):
     """read ogl_version."""
@@ -137,7 +101,6 @@ def read_ogl_data_folder(folder,
 
     returns a concatenated dataframe
     """
-
     # TODO refactor this
     dfs = []
     failures = {"empty": [], "dtype": []}
@@ -195,42 +158,26 @@ def read_ogl_data_folder(folder,
     return pd.concat(dfs, ignore_index=True), failures, metadata, logs
 
 
-def compute_speedup_vs_OF_same_solver(df):
+def compute_speedup(df, ref, drop_indices=None):
+    """Compute and return the speedup compared to a reference."""
+    from copy import deepcopy
     df = deepcopy(df)
-    #df.index = df.index.droplevel("no")
-    reference = idx_query(df, "executor_p", "Serial")
+    if drop_indices:
+        for idx in drop_indices:
+            df.index = df.index.droplevel(idx)
 
-    res = df.groupby(level="executor_p").apply(lambda x: reference / x)
-    # FIXME for now we change the backend of mpi results to GKO to avoid dropping the data
-    # the above introduced some extra index columns
-    res.index = res.index.droplevel(0)
-    #print(res.dropna())
-    #res = res[res.index.get_level_values("backend") != "OF"]
-    return res.dropna()
+    reference = idx_query(df, ref[0], ref[1])
+    reference.index = reference.index.droplevel([ref[0]])
 
+    def dropped_divide(df):
+        from copy import deepcopy
+        df = deepcopy(df)
+        df.index = df.index.droplevel(ref[0])
+        return df
 
-def compute_speedup_renumbered(df_unrenumbered, df_renumber):
-    """ compute of preconditioned vs unpreconditioned () runs """
-    res = df_renumber / df_unrenumbered
-    return res.dropna()
-
-
-def compute_speedup_precond(df, precond):
-    """ compute of preconditioned vs unpreconditioned () runs """
-    reference = idx_query(df, "preconditioner", "none")
-    reference.index = reference.index.droplevel("preconditioner")
-    res = df.groupby(level="preconditioner").apply(lambda x: reference / x)
-    res.index = res.index.droplevel(0)
-    return res.dropna()
-
-
-def compute_speedup_solver(df, solver):
-    """ compute of preconditioned vs unpreconditioned () runs """
-    reference = idx_query(df, "solver_p", solver)
-    reference.index = reference.index.droplevel("solver_p")
-    res = df.groupby(level="solver_p").apply(lambda x: reference / x)
-    res.index = res.index.droplevel(0)
-    return res.dropna()
+    res = df.groupby(
+        level=ref[0]).apply(lambda x: reference / dropped_divide(x))
+    return res
 
 
 def read_gingko_matrix(fn):
@@ -270,7 +217,7 @@ def import_results(path,
                    import_logs=False,
                    short_hostnames=False,
                    dimension=3):
-
+    """Import and postprocess obr benchmark results."""
     df, failures, metadata, logs = read_ogl_data_folder(
         path + case, filt, min_version, import_logs)
 
@@ -310,17 +257,11 @@ def import_results(path,
                 pass
 
     # calculate some further metrics
-    #df["total_run_time"] = df["run_time"]
-    #df["run_time"] = df["run_time"] - df["setup_time"]
-
-    #df["total_linear_solve_p"] = df["linear_solve_p"]
-    #df["linear_solve_p"] = df["linear_solve_p"] - df["init_linear_solve_p"]
-    #df["run_time_per_iteration_p"] = df["run_time"]/df["number_iterations_p"]
-
-    #df["iterations_per_cell"] = df["number_iterations_p"]/(df["resolution"]**dimension)
-    #df["run_time_per_cell"] = df["run_time"]/(df["resolution"]**dimension)
-    #df["run_time_per_cell_and_iter"] = df["run_time"]/((df["resolution"]**dimension)* df["number_iterations_p"])
-    #df["linear_solve_per_cell_and_iter"] = df["linear_solve_U"]/((df["resolution"]**dimension)* df["number_iterations_p"])
+    df["linear_solve_p_per_iter"] = (df["linear_solve_p"] /
+                                     df["number_iterations_p"])
+    df["cells"] = df["resolution"]**dimension
+    df["linear_solve_p_per_cell_and_iter"] = (df["linear_solve_p_per_iter"] /
+                                              df["cells"])
 
     # reorder indices a bit
     indices[0], indices[1] = indices[1], indices[0]
@@ -331,24 +272,6 @@ def import_results(path,
     # this will compute mean when all indices are identical
     mean = df.groupby(level=indices).mean()
 
-    # TODO check constraints or find workarounds
-    # ie if job did not finish the resolutions might not match
-    # hence for executor and solver the resolutions should have same length
-
-    #executor = set(df.index.get_level_values("executor"))
-    #for e in executor:
-    #    backends = set(df.loc[e].index.get_level_values("backend"))
-    #    for b in backends:
-    #       solver = set(df.loc[e].loc[b].index.get_level_values("solver_p"))
-    #        for s in solver:
-    #            print(e,b,s, mean.loc[e].loc[b].loc[s].index.get_level_values("resolution"))
-
-    #print({e: mean.loc[e] for e in executor})
-
-    # drop device for now to allow division across different devices
-    #mean.index = mean.index.droplevel("device")
-
-    #indices_wo_device = list(filter(lambda x: x != "processes" and x != "device", indices))
     return {
         "raw": df,
         "mean": mean,
@@ -368,13 +291,13 @@ def min_over_index(df, col, idx):
 
 
 def min_time_multi(df, col="run_time"):
-    """ get the minimum run_time (non zero) for multiprocess data"""
+    """Get the minimum run_time (non zero) for multiprocess data."""
     return min_over_index(min_over_index(df, col, "omp_threads"), col,
                           "mpi_ranks")
 
 
 def min_time(df, col="run_time"):
-    """ get the minimum run_time for multiprocess data"""
+    """Get the minimum run_time for multiprocess data."""
     indices = list(df.index.names)
     filt_idx = [
         "solver_p", 'executor_p', 'preconditioner_p', 'resolution', 'node',
