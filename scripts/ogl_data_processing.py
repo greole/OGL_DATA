@@ -2,13 +2,8 @@ import pandas as pd
 import os
 from packaging import version
 import Owls as ow
-import matplotlib.pyplot as plt
-from matplotlib.pyplot import savefig
 
 
-def get_ogl_versions(df):
-    """read ogl_version."""
-    return set(df.index.get_level_values("ogl_version"))
 
 
 def idx_query(df, idx, val):
@@ -69,7 +64,7 @@ def read_logs(folder):
 
     keys_linear_solver = {
         "linear solve " + f: ["linear_solve_p"]
-        for f in ["p"]
+        for f in ["p", "U"]
     }
     keys.update(keys_linear_solver)
 
@@ -77,7 +72,10 @@ def read_logs(folder):
         if not log_content:
             continue
         try:
-            logs[log_hash] = ow.read_log_str(log_content, keys)
+            logs[log_hash] = [
+                ow.read_log_str(log_content, keys),
+                ow.read_log_str(log_content, keys_solver),
+            ]
         except Exception as e:
             print(e)
             pass
@@ -246,12 +244,14 @@ def import_results(path,
 
     # Refactor
     for directory, logs_ in logs.items():
-        for log_hash, ff in logs_.items():
+        for log_hash, ret in logs_.items():
             try:
+                ff, iters = ret
                 latest_time = max(ff["Time"])
                 df.loc[df["log_id"] == log_hash, "linear_solve_p"] = ff.at(
                     "Time", latest_time)["linear_solve_p"].mean()
-
+                df.loc[df["log_id"] == log_hash, "number_iterations_p"] = iters.at(
+                    "Time", latest_time).at("Key", "Solving for p")["iterations"].mean()
             except Exception as e:
                 print(e)
                 pass

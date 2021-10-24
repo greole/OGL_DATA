@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
+import matplotlib.pyplot as plt
+from matplotlib.pyplot import savefig
 
-import matplotlib.pylab as plt
+# TODO move to sep module
+
+def idx_query(df, idx, val):
+    """Shortcut to select specific index."""
+    return df[df.index.get_level_values(idx) == val]
+
+
+def get_ogl_versions(df):
+    """read ogl_version."""
+    return set(df.index.get_level_values("ogl_version"))
 
 
 def iterate_versions(df):
