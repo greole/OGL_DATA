@@ -16058,3 +16058,1272 @@ ExecutionTime = 450.41 s  ClockTime = 429 s
 End
 
 ================================================================================
+hash: d36d3c8e4ad02d5e95a79b44d900f112
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam
+Date   : Nov 16 2021
+Time   : 11:22:35
+Host   : "nla-gpu1.ianm.kit.edu"
+PID    : 1597341
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/100/Variation_matrix_solver/CG_NoPrecond_HIP/1637058155
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/100/Variation_matrix_solver/CG_NoPrecond_HIP/1637058155/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.001
+
+Courant Number mean: 1.7257e-17 max: 1.73472e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.00717233, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 413094
+[OGL LOG] init_host_sparsity_pattern : 1297009 mu s
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 62167 mu s
+[OGL LOG] create_and_push_b : 2040 mu s
+[OGL LOG] init_preconditioner : 6 mu s
+[OGL LOG] solve : 880021 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 1, Final residual = 9.93588e-07, No Iterations 901
+linear solve p 5833029
+time step continuity errors : sum local = 5.69137e-10, global = 1.21556e-20, cumulative = 1.21556e-20
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 46117 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 1872 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 623547 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.777316, Final residual = 6.72349e-07, No Iterations 901
+linear solve p 689720
+time step continuity errors : sum local = 4.85916e-10, global = -9.16571e-22, cumulative = 1.1239e-20
+ExecutionTime = 6.04 s  ClockTime = 8 s
+
+Time = 0.002
+
+Courant Number mean: 0.0560717 max: 0.805494
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.138282, Final residual = 0.00319034, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.430538, Final residual = 0.00909566, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.9903, Final residual = 0.0225854, No Iterations 5
+linear solve U 827746
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 49040 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 2133 mu s
+[OGL LOG] init_preconditioner : 4 mu s
+[OGL LOG] solve : 624772 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.799783, Final residual = 4.48256e-07, No Iterations 901
+linear solve p 695151
+time step continuity errors : sum local = 4.58629e-10, global = 9.22637e-21, cumulative = 2.04654e-20
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 49161 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 1882 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 628385 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.740737, Final residual = 3.77042e-07, No Iterations 901
+linear solve p 696765
+time step continuity errors : sum local = 3.93752e-10, global = -3.7608e-21, cumulative = 1.67046e-20
+ExecutionTime = 9.69 s  ClockTime = 11 s
+
+Time = 0.003
+
+Courant Number mean: 0.0852773 max: 0.943633
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0649257, Final residual = 0.00112815, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.225975, Final residual = 0.00296595, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.792327, Final residual = 0.0162193, No Iterations 5
+linear solve U 817539
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 48540 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 1876 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 628146 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.832938, Final residual = 3.9859e-07, No Iterations 901
+linear solve p 695977
+time step continuity errors : sum local = 3.83416e-10, global = 6.44571e-21, cumulative = 2.31503e-20
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 47653 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 1859 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 632748 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.802223, Final residual = 3.62859e-07, No Iterations 901
+linear solve p 700118
+time step continuity errors : sum local = 3.40462e-10, global = -9.27566e-21, cumulative = 1.38747e-20
+ExecutionTime = 13.34 s  ClockTime = 13 s
+
+End
+
+================================================================================
+hash: 9186bea3c667254e95f18b263d6e9c0d
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam
+Date   : Nov 16 2021
+Time   : 11:22:49
+Host   : "nla-gpu1.ianm.kit.edu"
+PID    : 1597587
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/100/Variation_matrix_solver/BiCGStab_NoPrecond_HIP/1637058169
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/100/Variation_matrix_solver/BiCGStab_NoPrecond_HIP/1637058169/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.001
+
+Courant Number mean: 1.7257e-17 max: 1.73472e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.00717233, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 419161
+[OGL LOG] init_host_sparsity_pattern : 1319087 mu s
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 62930 mu s
+[OGL LOG] create_and_push_b : 1987 mu s
+[OGL LOG] init_preconditioner : 6 mu s
+[OGL LOG] solve : 1351983 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 1, Final residual = 2.5769e-07, No Iterations 724
+linear solve p 3229364
+time step continuity errors : sum local = 0.000896636, global = -4.15109e-20, cumulative = -4.15109e-20
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 48851 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 1844 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 1013187 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.8974, Final residual = 6.52066e-07, No Iterations 756
+linear solve p 1082505
+time step continuity errors : sum local = 2.24223e-09, global = 2.6095e-22, cumulative = -4.12499e-20
+ExecutionTime = 7.54 s  ClockTime = 5 s
+
+Time = 0.002
+
+Courant Number mean: 0.0560753 max: 0.805641
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.138296, Final residual = 0.00319058, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.437836, Final residual = 0.00919594, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.89738, Final residual = 0.0141515, No Iterations 5
+linear solve U 816374
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 48634 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 1813 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 984148 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.848732, Final residual = 5.30018e-07, No Iterations 735
+linear solve p 1052923
+time step continuity errors : sum local = 1.6241e-09, global = 3.98755e-21, cumulative = -3.72624e-20
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 47833 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 1805 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 952776 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.758333, Final residual = 9.78376e-07, No Iterations 711
+linear solve p 1021313
+time step continuity errors : sum local = 3.99829e-05, global = 8.12041e-21, cumulative = -2.9142e-20
+ExecutionTime = 12.32 s  ClockTime = 9 s
+
+Time = 0.003
+
+Courant Number mean: 0.0853645 max: 0.945376
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0649216, Final residual = 0.00112778, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.236594, Final residual = 0.00297169, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.820849, Final residual = 0.0110948, No Iterations 5
+linear solve U 819261
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 51025 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 1837 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 1034418 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.855831, Final residual = 1.30311e-07, No Iterations 770
+linear solve p 1106722
+time step continuity errors : sum local = 3.23307e-10, global = -8.2802e-21, cumulative = -3.74222e-20
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 50721 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 1854 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 1074984 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.799932, Final residual = 9.3651e-07, No Iterations 795
+linear solve p 1145652
+time step continuity errors : sum local = 2.21873e-09, global = 2.11447e-21, cumulative = -3.53077e-20
+ExecutionTime = 17.4 s  ClockTime = 12 s
+
+End
+
+================================================================================
+hash: d43def090dc88a96d5c0340a27777964
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam
+Date   : Nov 16 2021
+Time   : 11:23:02
+Host   : "nla-gpu1.ianm.kit.edu"
+PID    : 1597721
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/200/Variation_matrix_solver/CG_NoPrecond_HIP/1637058182
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/200/Variation_matrix_solver/CG_NoPrecond_HIP/1637058182/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.0005
+
+Courant Number mean: 1.64868e-17 max: 4.16334e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0184276, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 3472108
+[OGL LOG] init_host_sparsity_pattern : 10713727 mu s
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 464945 mu s
+[OGL LOG] create_and_push_b : 13153 mu s
+[OGL LOG] init_preconditioner : 7 mu s
+[OGL LOG] solve : 5497632 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 1, Final residual = 9.85615e-07, No Iterations 1815
+linear solve p 17504739
+time step continuity errors : sum local = 1.82515e-10, global = -3.74672e-21, cumulative = -3.74672e-21
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 377824 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 7160 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 5012109 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.814525, Final residual = 2.38457e-07, No Iterations 1873
+linear solve p 5514400
+time step continuity errors : sum local = 5.37711e-11, global = -6.07966e-22, cumulative = -4.35469e-21
+ExecutionTime = 37.47 s  ClockTime = 35 s
+
+Time = 0.001
+
+Courant Number mean: 0.0401056 max: 0.861331
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.118121, Final residual = 0.0105765, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.504586, Final residual = 0.0420529, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.995163, Final residual = 0.0926682, No Iterations 5
+linear solve U 6787539
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 376573 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 7611 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 4911188 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.890719, Final residual = 2.15819e-07, No Iterations 1851
+linear solve p 5407358
+time step continuity errors : sum local = 1.03464e-10, global = 1.08769e-21, cumulative = -3.267e-21
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 376446 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 7085 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 4958564 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.841127, Final residual = 1.95886e-07, No Iterations 1851
+linear solve p 5458976
+time step continuity errors : sum local = 9.58069e-11, global = 8.4474e-22, cumulative = -2.42226e-21
+ExecutionTime = 61.43 s  ClockTime = 57 s
+
+Time = 0.0015
+
+Courant Number mean: 0.0625809 max: 1.02192
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0696031, Final residual = 0.00464901, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.362499, Final residual = 0.0177327, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.847648, Final residual = 0.0667767, No Iterations 5
+linear solve U 6761139
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 376940 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 7286 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 4959975 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.935164, Final residual = 2.22006e-07, No Iterations 1851
+linear solve p 5455536
+time step continuity errors : sum local = 1.4248e-10, global = -6.84059e-22, cumulative = -3.10632e-21
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 377139 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 7040 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 4956419 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.905288, Final residual = 2.0723e-07, No Iterations 1851
+linear solve p 5452346
+time step continuity errors : sum local = 1.31911e-10, global = 2.44753e-21, cumulative = -6.58786e-22
+ExecutionTime = 85.41 s  ClockTime = 79 s
+
+End
+
+================================================================================
+hash: 8f8203d6fd71403b71a885a892f81d58
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam
+Date   : Nov 16 2021
+Time   : 11:24:22
+Host   : "nla-gpu1.ianm.kit.edu"
+PID    : 1598651
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/200/Variation_matrix_solver/BiCGStab_NoPrecond_HIP/1637058262
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/200/Variation_matrix_solver/BiCGStab_NoPrecond_HIP/1637058262/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.0005
+
+Courant Number mean: 1.64868e-17 max: 4.16334e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0184276, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 3466702
+[OGL LOG] init_host_sparsity_pattern : 10812015 mu s
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 468083 mu s
+[OGL LOG] create_and_push_b : 14373 mu s
+[OGL LOG] init_preconditioner : 7 mu s
+[OGL LOG] solve : 8674863 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 1, Final residual = 3.69248e-07, No Iterations 1519
+linear solve p 20792938
+time step continuity errors : sum local = 6.26933e-05, global = -6.09989e-20, cumulative = -6.09989e-20
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 407406 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 7158 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 8209662 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.858028, Final residual = 5.87219e-08, No Iterations 1650
+linear solve p 8739229
+time step continuity errors : sum local = 3.19649e-11, global = -4.13768e-21, cumulative = -6.51366e-20
+ExecutionTime = 45.7 s  ClockTime = 41 s
+
+Time = 0.001
+
+Courant Number mean: 0.0401063 max: 0.861331
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.118126, Final residual = 0.0105771, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.506532, Final residual = 0.0421887, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.956098, Final residual = 0.0810696, No Iterations 5
+linear solve U 6804461
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 401622 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 7209 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 7751205 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.900829, Final residual = 1.41163e-07, No Iterations 1551
+linear solve p 8275863
+time step continuity errors : sum local = 1.62956e-10, global = 1.51108e-22, cumulative = -6.49855e-20
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 405591 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 7275 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 9875319 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.851419, Final residual = 1.23237e-07, No Iterations 1984
+linear solve p 10411426
+time step continuity errors : sum local = 1.43019e-10, global = -1.05751e-21, cumulative = -6.6043e-20
+ExecutionTime = 79.27 s  ClockTime = 71 s
+
+Time = 0.0015
+
+Courant Number mean: 0.0625899 max: 1.02196
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0696138, Final residual = 0.0046483, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.36402, Final residual = 0.01769, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.857323, Final residual = 0.0613123, No Iterations 5
+linear solve U 6759726
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 401471 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 7182 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 8294687 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.939597, Final residual = 6.30269e-07, No Iterations 1659
+linear solve p 8816552
+time step continuity errors : sum local = 9.03265e-10, global = 8.51495e-22, cumulative = -6.51915e-20
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 401959 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 7203 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 5782642 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.90685, Final residual = 9.70095e-07, No Iterations 1155
+linear solve p 6304806
+time step continuity errors : sum local = 1.33127e-09, global = 1.61252e-21, cumulative = -6.3579e-20
+ExecutionTime = 108.44 s  ClockTime = 97 s
+
+End
+
+================================================================================
+hash: ffba01377a5934f586b1a9f5cd7159f2
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam
+Date   : Nov 16 2021
+Time   : 11:26:00
+Host   : "nla-gpu1.ianm.kit.edu"
+PID    : 1599816
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/300/Variation_matrix_solver/CG_NoPrecond_HIP/1637058360
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/300/Variation_matrix_solver/CG_NoPrecond_HIP/1637058360/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.000333333
+
+Courant Number mean: 1.63465e-17 max: 6.245e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0259107, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 11867883
+[OGL LOG] init_host_sparsity_pattern : 37864624 mu s
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 1576219 mu s
+[OGL LOG] create_and_push_b : 35594 mu s
+[OGL LOG] init_preconditioner : 7 mu s
+[OGL LOG] solve : 22754306 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 1, Final residual = 9.82686e-07, No Iterations 2731
+linear solve p 63906817
+time step continuity errors : sum local = 9.01466e-11, global = 3.34148e-21, cumulative = 3.34148e-21
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 1351558 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 23375 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 21401667 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.828547, Final residual = 8.93466e-07, No Iterations 2726
+linear solve p 23145293
+time step continuity errors : sum local = 9.84652e-11, global = -1.67482e-22, cumulative = 3.174e-21
+ExecutionTime = 131.47 s  ClockTime = 128 s
+
+Time = 0.000666667
+
+Courant Number mean: 0.0313142 max: 0.884933
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.106267, Final residual = 0.0161463, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.544643, Final residual = 0.0804637, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.996734, Final residual = 0.166279, No Iterations 5
+linear solve U 23164853
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 1353806 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 26190 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 21420499 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.921479, Final residual = 5.70935e-07, No Iterations 2726
+linear solve p 23184276
+time step continuity errors : sum local = 1.70366e-10, global = 9.06412e-22, cumulative = 4.08041e-21
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 1351854 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 23512 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 21410920 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.875916, Final residual = 5.21607e-07, No Iterations 2726
+linear solve p 23146041
+time step continuity errors : sum local = 1.58737e-10, global = 8.44983e-22, cumulative = 4.92539e-21
+ExecutionTime = 218.66 s  ClockTime = 212 s
+
+Time = 0.001
+
+Courant Number mean: 0.0497481 max: 1.07385
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0677241, Final residual = 0.00800595, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.423034, Final residual = 0.0365398, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.87354, Final residual = 0.118328, No Iterations 5
+linear solve U 23222430
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 1351882 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 24262 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 21403495 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.959697, Final residual = 5.78542e-07, No Iterations 2726
+linear solve p 23168915
+time step continuity errors : sum local = 2.75201e-10, global = 1.00455e-21, cumulative = 5.92994e-21
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 1350237 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 24269 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 21421798 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.92718, Final residual = 5.40131e-07, No Iterations 2726
+linear solve p 23164699
+time step continuity errors : sum local = 2.56815e-10, global = -3.15883e-21, cumulative = 2.77111e-21
+ExecutionTime = 305.89 s  ClockTime = 296 s
+
+End
+
+================================================================================
+hash: 1867a3a192e47e960041cc4a4ab83adf
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam
+Date   : Nov 16 2021
+Time   : 11:30:58
+Host   : "nla-gpu1.ianm.kit.edu"
+PID    : 1603153
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/300/Variation_matrix_solver/BiCGStab_NoPrecond_HIP/1637058658
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/300/Variation_matrix_solver/BiCGStab_NoPrecond_HIP/1637058658/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.000333333
+
+Courant Number mean: 1.63465e-17 max: 6.245e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0259107, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 11778024
+[OGL LOG] init_host_sparsity_pattern : 36835916 mu s
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 1577157 mu s
+[OGL LOG] create_and_push_b : 35617 mu s
+[OGL LOG] init_preconditioner : 6 mu s
+[OGL LOG] solve : 44203201 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 1, Final residual = 6.71507e-07, No Iterations 2859
+linear solve p 84328631
+time step continuity errors : sum local = 0.000114738, global = 9.01106e-20, cumulative = 9.01106e-20
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 1351369 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 24639 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 59244902 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.919205, Final residual = 6.64573e-07, No Iterations 4047
+linear solve p 61016072
+time step continuity errors : sum local = 3.28176e-10, global = 6.67078e-22, cumulative = 9.07777e-20
+ExecutionTime = 194.47 s  ClockTime = 185 s
+
+Time = 0.000666667
+
+Courant Number mean: 0.0313169 max: 0.884933
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.106298, Final residual = 0.0161523, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.550279, Final residual = 0.0802302, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.91049, Final residual = 0.113922, No Iterations 5
+linear solve U 23128669
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 1358840 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 23795 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 37489234 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.937128, Final residual = 2.43014e-07, No Iterations 2576
+linear solve p 39251862
+time step continuity errors : sum local = 2.33183e-10, global = -9.88805e-22, cumulative = 8.97889e-20
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 1360392 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 23288 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 43704326 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.887854, Final residual = 5.20409e-07, No Iterations 2987
+linear solve p 45468410
+time step continuity errors : sum local = 5.46868e-10, global = -9.62106e-24, cumulative = 8.97793e-20
+ExecutionTime = 322.93 s  ClockTime = 308 s
+
+Time = 0.001
+
+Courant Number mean: 0.0497654 max: 1.07343
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0677476, Final residual = 0.00799937, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.42666, Final residual = 0.0359479, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.876523, Final residual = 0.0797134, No Iterations 5
+linear solve U 23483294
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 1361119 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 24103 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 36337409 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.969132, Final residual = 5.83825e-07, No Iterations 2499
+linear solve p 38105773
+time step continuity errors : sum local = 8.38483e-10, global = -1.52852e-21, cumulative = 8.82508e-20
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 1353748 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 23441 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 57787472 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.921754, Final residual = 8.92115e-07, No Iterations 3911
+linear solve p 59543221
+time step continuity errors : sum local = 0.000393968, global = -8.31553e-19, cumulative = -7.43302e-19
+ExecutionTime = 465.75 s  ClockTime = 444 s
+
+End
+
+================================================================================
+hash: 65e561d7a2bbd4b71245e4bfd83b4883
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam
+Date   : Nov 16 2021
+Time   : 11:38:24
+Host   : "nla-gpu1.ianm.kit.edu"
+PID    : 1608110
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/CG_NoPrecond_HIP/1637059104
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/CG_NoPrecond_HIP/1637059104/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.00025
+
+Courant Number mean: 1.60501e-17 max: 9.71445e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0309155, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 30456605
+[OGL LOG] init_host_sparsity_pattern : 90854137 mu s
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 5394121 mu s
+[OGL LOG] create_and_push_b : 83961 mu s
+[OGL LOG] init_preconditioner : 8 mu s
+[OGL LOG] solve : 68287014 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 1, Final residual = 9.85052e-07, No Iterations 3648
+linear solve p 169903292
+time step continuity errors : sum local = 5.39728e-11, global = 1.24621e-21, cumulative = 1.24621e-21
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 3941057 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 48876 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 68323289 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.835924, Final residual = 3.10936e-07, No Iterations 3771
+linear solve p 73579077
+time step continuity errors : sum local = 2.0321e-11, global = -4.64892e-22, cumulative = 7.81321e-22
+ExecutionTime = 351.13 s  ClockTime = 344 s
+
+Time = 0.0005
+
+Courant Number mean: 0.0256884 max: 0.898165
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.098276, Final residual = 0.0200244, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.572442, Final residual = 0.117587, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.997526, Final residual = 0.23267, No Iterations 5
+linear solve U 59307009
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 4303567 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 51626 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 67087835 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.935963, Final residual = 1.98905e-07, No Iterations 3751
+linear solve p 73798841
+time step continuity errors : sum local = 4.09665e-11, global = -8.68615e-22, cumulative = -8.72941e-23
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 4048077 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 57824 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 67639909 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.892335, Final residual = 1.85484e-07, No Iterations 3751
+linear solve p 73090815
+time step continuity errors : sum local = 3.89574e-11, global = -2.75965e-22, cumulative = -3.63259e-22
+ExecutionTime = 602.37 s  ClockTime = 589 s
+
+Time = 0.00075
+
+Courant Number mean: 0.0413782 max: 1.11206
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0646067, Final residual = 0.0107014, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.453262, Final residual = 0.0546439, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.888833, Final residual = 0.163471, No Iterations 5
+linear solve U 58732431
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 3974631 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 59340 mu s
+[OGL LOG] init_preconditioner : 4 mu s
+[OGL LOG] solve : 67089213 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.969841, Final residual = 1.74729e-07, No Iterations 3751
+linear solve p 72483693
+time step continuity errors : sum local = 6.38258e-11, global = -2.96379e-22, cumulative = -6.59638e-22
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 3948539 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 53438 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 66990181 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.935601, Final residual = 1.66919e-07, No Iterations 3751
+linear solve p 72377208
+time step continuity errors : sum local = 6.11945e-11, global = 6.68928e-22, cumulative = 9.29015e-24
+ExecutionTime = 850.23 s  ClockTime = 832 s
+
+End
+
+================================================================================
+hash: b5174fdeb9a9991c3c2ef75629d1aad3
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam
+Date   : Nov 16 2021
+Time   : 11:52:22
+Host   : "nla-gpu1.ianm.kit.edu"
+PID    : 1617557
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/BiCGStab_NoPrecond_HIP/1637059942
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/BiCGStab_NoPrecond_HIP/1637059942/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.00025
+
+Courant Number mean: 1.60501e-17 max: 9.71445e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0309155, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 31415997
+[OGL LOG] init_host_sparsity_pattern : 92599001 mu s
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 4186034 mu s
+[OGL LOG] create_and_push_b : 104114 mu s
+[OGL LOG] init_preconditioner : 7 mu s
+[OGL LOG] solve : 137470256 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 1, Final residual = 5.46949e-07, No Iterations 3918
+linear solve p 242011311
+time step continuity errors : sum local = 0.00483375, global = 1.77195e-17, cumulative = 1.77195e-17
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 3843116 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 50343 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 98250045 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.987913, Final residual = 9.36532e-07, No Iterations 2886
+linear solve p 103246798
+time step continuity errors : sum local = 1.11468e-08, global = 9.17937e-23, cumulative = 1.77196e-17
+ExecutionTime = 465.09 s  ClockTime = 452 s
+
+Time = 0.0005
+
+Courant Number mean: 0.0259009 max: 0.898217
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.100602, Final residual = 0.020533, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.747682, Final residual = 0.0614615, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.877817, Final residual = 0.0726641, No Iterations 5
+linear solve U 59510131
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 4200198 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 60113 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 124024357 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.957669, Final residual = 6.955e-07, No Iterations 3680
+linear solve p 129633726
+time step continuity errors : sum local = 9.40199e-09, global = -6.89513e-23, cumulative = 1.77195e-17
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 4313793 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 56475 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 106967871 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.895455, Final residual = 9.92913e-07, No Iterations 3161
+linear solve p 112573918
+time step continuity errors : sum local = 2.4996e-07, global = 1.34729e-21, cumulative = 1.77209e-17
+ExecutionTime = 819.02 s  ClockTime = 799 s
+
+Time = 0.00075
+
+Courant Number mean: 0.0437897 max: 1.29073
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0790472, Final residual = 0.0128232, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.526869, Final residual = 0.0505303, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.908935, Final residual = 0.04932, No Iterations 5
+linear solve U 59715618
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 4620589 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 55061 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 122002288 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.979059, Final residual = 1.33964e-07, No Iterations 3654
+linear solve p 127726945
+time step continuity errors : sum local = 1.89246e-09, global = -1.75838e-22, cumulative = 1.77207e-17
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 4220076 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 54516 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 117255577 mu s
+nonehipGKOBiCGStab:  Solving for p, Initial residual = 0.905058, Final residual = 5.22927e-07, No Iterations 3431
+linear solve p 122612073
+time step continuity errors : sum local = 7.19456e-09, global = -1.46016e-21, cumulative = 1.77192e-17
+ExecutionTime = 1181.21 s  ClockTime = 1154 s
+
+End
+
+================================================================================
+hash: 71d3d0f20f191a374424666a5b20f817
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam
+Date   : Nov 16 2021
+Time   : 12:11:41
+Host   : "nla-gpu1.ianm.kit.edu"
+PID    : 1630714
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/500/Variation_matrix_solver/CG_NoPrecond_HIP/1637061101
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/500/Variation_matrix_solver/CG_NoPrecond_HIP/1637061101/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.0002
+
+Courant Number mean: 1.68168e-17 max: 1.04083e-13
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0344468, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 64799499
+[OGL LOG] init_host_sparsity_pattern : 184246936 mu s
+[OGL LOG] matrix not stored update host matrix
+[OGL LOG] update_host_mtx : 8434229 mu s
+[OGL LOG] create_and_push_b : 214458 mu s
+[OGL LOG] init_preconditioner : 6 mu s
+[OGL LOG] solve : 165635952 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 1, Final residual = 9.93186e-07, No Iterations 4566
+linear solve p 370421704
+time step continuity errors : sum local = 3.61801e-11, global = 2.77108e-21, cumulative = 2.77108e-21
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 7573333 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 103281 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 165205037 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.840409, Final residual = 2.56285e-07, No Iterations 4733
+linear solve p 175288810
+time step continuity errors : sum local = 1.10874e-11, global = -1.2504e-22, cumulative = 2.64604e-21
+ExecutionTime = 782.45 s  ClockTime = 774 s
+
+Time = 0.0004
+
+Courant Number mean: 0.021776 max: 0.906666
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0924312, Final residual = 0.0227954, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.59403, Final residual = 0.151821, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.998006, Final residual = 0.290618, No Iterations 5
+linear solve U 125422081
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 8375365 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 236842 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 166223096 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.944045, Final residual = 1.53864e-07, No Iterations 4726
+linear solve p 177461600
+time step continuity errors : sum local = 2.32387e-11, global = 2.02729e-22, cumulative = 2.84877e-21
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 8292714 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 247336 mu s
+[OGL LOG] init_preconditioner : 2 mu s
+[OGL LOG] solve : 168138221 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.901527, Final residual = 1.41697e-07, No Iterations 4726
+linear solve p 179145206
+time step continuity errors : sum local = 2.18247e-11, global = 2.38143e-22, cumulative = 3.08691e-21
+ExecutionTime = 1371.22 s  ClockTime = 1357 s
+
+Time = 0.0006
+
+Courant Number mean: 0.0354967 max: 1.1418
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0615169, Final residual = 0.0128079, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.471825, Final residual = 0.0714091, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.898992, Final residual = 0.201594, No Iterations 5
+linear solve U 126724873
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 6323627 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 100245 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 157755414 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.975131, Final residual = 8.41187e-07, No Iterations 4537
+linear solve p 165903915
+time step continuity errors : sum local = 2.4282e-10, global = -6.80503e-22, cumulative = 2.40641e-21
+[OGL LOG] matrix is stored and update of host matrix requested
+[OGL LOG] exp_update_host_mtx : 8346075 mu s
+update sys matrix
+create view into values
+overwrite device values
+done
+[OGL LOG] create_and_push_b : 119454 mu s
+[OGL LOG] init_preconditioner : 3 mu s
+[OGL LOG] solve : 158300102 mu s
+nonehipGKOCG:  Solving for p, Initial residual = 0.939997, Final residual = 9.35557e-07, No Iterations 4526
+linear solve p 169287962
+time step continuity errors : sum local = 2.71659e-10, global = -3.7459e-22, cumulative = 2.03182e-21
+ExecutionTime = 1933.2 s  ClockTime = 1913 s
+
+End
+
+================================================================================
