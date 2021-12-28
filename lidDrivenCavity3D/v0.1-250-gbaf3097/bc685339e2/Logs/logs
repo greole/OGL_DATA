@@ -5210,3 +5210,733 @@ End
 
 Finalising parallel run
 ================================================================================
+hash: da2443b173fb29ca85780eb1276f2fa9
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            nla-gpu2
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: nla-gpu2
+--------------------------------------------------------------------------
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam -parallel
+Date   : Dec 28 2021
+Time   : 10:10:17
+Host   : "nla-gpu2.ianm.kit.edu"
+PID    : 3555246
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/CG_NoPrecond_HIP/Variation_mpiRank/4/1640682614
+nProcs : 4
+Slaves : 
+3
+(
+"nla-gpu2.ianm.kit.edu.3555247"
+"nla-gpu2.ianm.kit.edu.3555248"
+"nla-gpu2.ianm.kit.edu.3555249"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/CG_NoPrecond_HIP/Variation_mpiRank/4/1640682614/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.00025
+
+Courant Number mean: 1.60501e-17 max: 9.71445e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0328664, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 7385573
+nonehipGKOCG:  Solving for p, Initial residual = 1, Final residual = 9.88876e-07, No Iterations 3542
+linear solve p 1276063261
+time step continuity errors : sum local = 5.56874e-11, global = 4.96007e-21, cumulative = 4.96007e-21
+nonehipGKOCG:  Solving for p, Initial residual = 0.836373, Final residual = 1.486e-07, No Iterations 3667
+linear solve p 76758143
+time step continuity errors : sum local = 9.95846e-12, global = 4.24025e-22, cumulative = 5.3841e-21
+ExecutionTime = 9956.77 s  ClockTime = 9970 s
+
+Time = 0.0005
+
+Courant Number mean: 0.0250855 max: 0.904223
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0981371, Final residual = 0.0223705, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.574074, Final residual = 0.123448, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.985622, Final residual = 0.243081, No Iterations 5
+linear solve U 13924941
+nonehipGKOCG:  Solving for p, Initial residual = 0.939521, Final residual = 1.90376e-07, No Iterations 3651
+linear solve p 77365414
+time step continuity errors : sum local = 4.15483e-11, global = 8.47492e-22, cumulative = 6.23159e-21
+nonehipGKOCG:  Solving for p, Initial residual = 0.895059, Final residual = 9.91328e-07, No Iterations 3505
+linear solve p 74030198
+time step continuity errors : sum local = 2.2059e-10, global = -1.11502e-21, cumulative = 5.11656e-21
+ExecutionTime = 10136 s  ClockTime = 10145 s
+
+Time = 0.00075
+
+Courant Number mean: 0.0406438 max: 1.10933
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0636264, Final residual = 0.0116203, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.44765, Final residual = 0.0585824, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.876354, Final residual = 0.167806, No Iterations 5
+linear solve U 13870108
+nonehipGKOCG:  Solving for p, Initial residual = 0.970342, Final residual = 8.54447e-07, No Iterations 3501
+linear solve p 73974946
+time step continuity errors : sum local = 3.17247e-10, global = -6.4044e-22, cumulative = 4.47612e-21
+nonehipGKOCG:  Solving for p, Initial residual = 0.934118, Final residual = 8.33001e-07, No Iterations 3501
+linear solve p 75994260
+time step continuity errors : sum local = 3.10433e-10, global = 6.15967e-22, cumulative = 5.09209e-21
+ExecutionTime = 10313.6 s  ClockTime = 10319 s
+
+End
+
+Finalising parallel run
+================================================================================
+hash: e7183989e8d0188e2829398c3de2ecb1
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            nla-gpu2
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: nla-gpu2
+--------------------------------------------------------------------------
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam -parallel
+Date   : Dec 28 2021
+Time   : 13:02:21
+Host   : "nla-gpu2.ianm.kit.edu"
+PID    : 3649832
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/CG_NoPrecond_HIP/Variation_mpiRank/8/1640692938
+nProcs : 8
+Slaves : 
+7
+(
+"nla-gpu2.ianm.kit.edu.3649833"
+"nla-gpu2.ianm.kit.edu.3649834"
+"nla-gpu2.ianm.kit.edu.3649835"
+"nla-gpu2.ianm.kit.edu.3649836"
+"nla-gpu2.ianm.kit.edu.3649837"
+"nla-gpu2.ianm.kit.edu.3649838"
+"nla-gpu2.ianm.kit.edu.3649839"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/CG_NoPrecond_HIP/Variation_mpiRank/8/1640692938/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.00025
+
+Courant Number mean: 1.60501e-17 max: 9.71445e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0332331, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 3653207
+nonehipGKOCG:  Solving for p, Initial residual = 1, Final residual = 9.85442e-07, No Iterations 3644
+linear solve p -302700130
+time step continuity errors : sum local = 5.53668e-11, global = 1.07321e-21, cumulative = 1.07321e-21
+nonehipGKOCG:  Solving for p, Initial residual = 0.835498, Final residual = 2.83783e-07, No Iterations 3771
+linear solve p 74031994
+time step continuity errors : sum local = 1.89902e-11, global = 1.98418e-22, cumulative = 1.27163e-21
+ExecutionTime = 4075.75 s  ClockTime = 4080 s
+
+Time = 0.0005
+
+Courant Number mean: 0.0249981 max: 0.903906
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0981542, Final residual = 0.0224966, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.574372, Final residual = 0.12607, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.976392, Final residual = 0.241031, No Iterations 5
+linear solve U 7021940
+nonehipGKOCG:  Solving for p, Initial residual = 0.939412, Final residual = 1.92926e-07, No Iterations 3751
+linear solve p 75981750
+time step continuity errors : sum local = 4.20131e-11, global = -4.47707e-22, cumulative = 8.23922e-22
+nonehipGKOCG:  Solving for p, Initial residual = 0.894577, Final residual = 1.81214e-07, No Iterations 3751
+linear solve p 75965227
+time step continuity errors : sum local = 4.0242e-11, global = 7.27036e-22, cumulative = 1.55096e-21
+ExecutionTime = 4243.49 s  ClockTime = 4244 s
+
+Time = 0.00075
+
+Courant Number mean: 0.0405234 max: 1.11034
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0634788, Final residual = 0.0117727, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.447073, Final residual = 0.0596303, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.866448, Final residual = 0.165243, No Iterations 5
+linear solve U 6965200
+nonehipGKOCG:  Solving for p, Initial residual = 0.970319, Final residual = 1.69872e-07, No Iterations 3751
+linear solve p 73759113
+time step continuity errors : sum local = 6.29269e-11, global = 1.09441e-22, cumulative = 1.6604e-21
+nonehipGKOCG:  Solving for p, Initial residual = 0.933815, Final residual = 1.64817e-07, No Iterations 3751
+linear solve p 77579175
+time step continuity errors : sum local = 6.12812e-11, global = 1.1735e-21, cumulative = 2.8339e-21
+ExecutionTime = 4410.75 s  ClockTime = 4407 s
+
+End
+
+Finalising parallel run
+================================================================================
+hash: ac5b25a6e44fa98aa8245a19da93bfd0
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            nla-gpu2
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: nla-gpu2
+--------------------------------------------------------------------------
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam -parallel
+Date   : Dec 28 2021
+Time   : 14:15:52
+Host   : "nla-gpu2.ianm.kit.edu"
+PID    : 3690380
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/CG_NoPrecond_HIP/Variation_mpiRank/16/1640697349
+nProcs : 16
+Slaves : 
+15
+(
+"nla-gpu2.ianm.kit.edu.3690381"
+"nla-gpu2.ianm.kit.edu.3690382"
+"nla-gpu2.ianm.kit.edu.3690383"
+"nla-gpu2.ianm.kit.edu.3690384"
+"nla-gpu2.ianm.kit.edu.3690385"
+"nla-gpu2.ianm.kit.edu.3690386"
+"nla-gpu2.ianm.kit.edu.3690387"
+"nla-gpu2.ianm.kit.edu.3690388"
+"nla-gpu2.ianm.kit.edu.3690389"
+"nla-gpu2.ianm.kit.edu.3690390"
+"nla-gpu2.ianm.kit.edu.3690391"
+"nla-gpu2.ianm.kit.edu.3690392"
+"nla-gpu2.ianm.kit.edu.3690393"
+"nla-gpu2.ianm.kit.edu.3690394"
+"nla-gpu2.ianm.kit.edu.3690395"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/CG_NoPrecond_HIP/Variation_mpiRank/16/1640697349/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.00025
+
+Courant Number mean: 1.60501e-17 max: 9.71445e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0338351, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 2115277
+nonehipGKOCG:  Solving for p, Initial residual = 1, Final residual = 9.95205e-07, No Iterations 3559
+linear solve p -2025381944
+time step continuity errors : sum local = 5.96127e-11, global = 3.70202e-21, cumulative = 3.70202e-21
+nonehipGKOCG:  Solving for p, Initial residual = 0.839507, Final residual = 9.01557e-07, No Iterations 3551
+linear solve p 145218613
+time step continuity errors : sum local = 6.38805e-11, global = 1.58431e-22, cumulative = 3.86045e-21
+ExecutionTime = 2422.28 s  ClockTime = 2423 s
+
+Time = 0.0005
+
+Courant Number mean: 0.0248803 max: 0.904423
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0982105, Final residual = 0.0228624, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.574686, Final residual = 0.128718, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.93835, Final residual = 0.237945, No Iterations 5
+linear solve U 4084569
+nonehipGKOCG:  Solving for p, Initial residual = 0.94266, Final residual = 3.14024e-07, No Iterations 3551
+linear solve p 143888128
+time step continuity errors : sum local = 7.24737e-11, global = 5.70987e-22, cumulative = 4.43144e-21
+nonehipGKOCG:  Solving for p, Initial residual = 0.897373, Final residual = 2.9482e-07, No Iterations 3551
+linear solve p 143554702
+time step continuity errors : sum local = 6.93759e-11, global = 9.3528e-22, cumulative = 5.36672e-21
+ExecutionTime = 2720.17 s  ClockTime = 2718 s
+
+Time = 0.00075
+
+Courant Number mean: 0.0403746 max: 1.11033
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0633983, Final residual = 0.0120518, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.44759, Final residual = 0.0613827, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.844186, Final residual = 0.16347, No Iterations 5
+linear solve U 4106649
+nonehipGKOCG:  Solving for p, Initial residual = 0.970937, Final residual = 3.223e-07, No Iterations 3551
+linear solve p 146547882
+time step continuity errors : sum local = 1.22521e-10, global = 1.03884e-21, cumulative = 6.40556e-21
+nonehipGKOCG:  Solving for p, Initial residual = 0.933868, Final residual = 3.07295e-07, No Iterations 3551
+linear solve p 146312326
+time step continuity errors : sum local = 1.17219e-10, global = 5.44146e-22, cumulative = 6.94971e-21
+ExecutionTime = 3023.43 s  ClockTime = 3018 s
+
+End
+
+Finalising parallel run
+================================================================================
+hash: 6722ff5311295e48b22cac71d12384f7
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            nla-gpu2
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: nla-gpu2
+--------------------------------------------------------------------------
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam -parallel
+Date   : Dec 28 2021
+Time   : 15:06:14
+Host   : "nla-gpu2.ianm.kit.edu"
+PID    : 3718173
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/CG_NoPrecond_HIP/Variation_mpiRank/32/1640700371
+nProcs : 32
+Slaves : 
+31
+(
+"nla-gpu2.ianm.kit.edu.3718174"
+"nla-gpu2.ianm.kit.edu.3718175"
+"nla-gpu2.ianm.kit.edu.3718176"
+"nla-gpu2.ianm.kit.edu.3718177"
+"nla-gpu2.ianm.kit.edu.3718178"
+"nla-gpu2.ianm.kit.edu.3718179"
+"nla-gpu2.ianm.kit.edu.3718180"
+"nla-gpu2.ianm.kit.edu.3718181"
+"nla-gpu2.ianm.kit.edu.3718182"
+"nla-gpu2.ianm.kit.edu.3718183"
+"nla-gpu2.ianm.kit.edu.3718184"
+"nla-gpu2.ianm.kit.edu.3718185"
+"nla-gpu2.ianm.kit.edu.3718186"
+"nla-gpu2.ianm.kit.edu.3718187"
+"nla-gpu2.ianm.kit.edu.3718188"
+"nla-gpu2.ianm.kit.edu.3718189"
+"nla-gpu2.ianm.kit.edu.3718190"
+"nla-gpu2.ianm.kit.edu.3718191"
+"nla-gpu2.ianm.kit.edu.3718192"
+"nla-gpu2.ianm.kit.edu.3718193"
+"nla-gpu2.ianm.kit.edu.3718194"
+"nla-gpu2.ianm.kit.edu.3718195"
+"nla-gpu2.ianm.kit.edu.3718196"
+"nla-gpu2.ianm.kit.edu.3718197"
+"nla-gpu2.ianm.kit.edu.3718198"
+"nla-gpu2.ianm.kit.edu.3718199"
+"nla-gpu2.ianm.kit.edu.3718200"
+"nla-gpu2.ianm.kit.edu.3718201"
+"nla-gpu2.ianm.kit.edu.3718202"
+"nla-gpu2.ianm.kit.edu.3718203"
+"nla-gpu2.ianm.kit.edu.3718204"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/CG_NoPrecond_HIP/Variation_mpiRank/32/1640700371/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.00025
+
+Courant Number mean: 1.60501e-17 max: 9.71445e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0340181, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 1832781
+nonehipGKOCG:  Solving for p, Initial residual = 1, Final residual = 9.95606e-07, No Iterations 3556
+linear solve p 1386732732
+time step continuity errors : sum local = 6.07169e-11, global = 3.48717e-21, cumulative = 3.48717e-21
+nonehipGKOCG:  Solving for p, Initial residual = 0.841162, Final residual = 8.61782e-07, No Iterations 3551
+linear solve p 577145870
+time step continuity errors : sum local = 6.19893e-11, global = -2.44613e-22, cumulative = 3.24255e-21
+ExecutionTime = 1970.65 s  ClockTime = 1971 s
+
+Time = 0.0005
+
+Courant Number mean: 0.0248469 max: 0.904816
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0982264, Final residual = 0.0230163, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.574553, Final residual = 0.130562, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.936016, Final residual = 0.240601, No Iterations 5
+linear solve U 3804201
+nonehipGKOCG:  Solving for p, Initial residual = 0.944011, Final residual = 6.11368e-07, No Iterations 3551
+linear solve p 582589907
+time step continuity errors : sum local = 1.44552e-10, global = 1.25841e-21, cumulative = 4.50096e-21
+nonehipGKOCG:  Solving for p, Initial residual = 0.898064, Final residual = 5.76743e-07, No Iterations 3551
+linear solve p 583648693
+time step continuity errors : sum local = 1.39074e-10, global = 3.77813e-22, cumulative = 4.87877e-21
+ExecutionTime = 3144.47 s  ClockTime = 3144 s
+
+Time = 0.00075
+
+Courant Number mean: 0.0403189 max: 1.11046
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0633126, Final residual = 0.0121648, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.446949, Final residual = 0.0625726, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.830668, Final residual = 0.161636, No Iterations 5
+linear solve U 3905423
+nonehipGKOCG:  Solving for p, Initial residual = 0.971216, Final residual = 5.42107e-07, No Iterations 3551
+linear solve p 605687122
+time step continuity errors : sum local = 2.08885e-10, global = 4.38006e-22, cumulative = 5.31678e-21
+nonehipGKOCG:  Solving for p, Initial residual = 0.933493, Final residual = 5.17511e-07, No Iterations 3551
+linear solve p 581454357
+time step continuity errors : sum local = 2.0009e-10, global = 5.20056e-23, cumulative = 5.36878e-21
+ExecutionTime = 4339.37 s  ClockTime = 4338 s
+
+End
+
+Finalising parallel run
+================================================================================
+hash: 30dea8bcf4b4848ada56fc6ea54c7023
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            nla-gpu2
+  Device name:           mlx5_0
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: nla-gpu2
+--------------------------------------------------------------------------
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-ef60d22ea792
+Exec   : icoFoam -parallel
+Date   : Dec 28 2021
+Time   : 16:18:38
+Host   : "nla-gpu2.ianm.kit.edu"
+PID    : 3758140
+I/O    : uncollated
+Case   : /tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/CG_NoPrecond_HIP/Variation_mpiRank/40/1640704714
+nProcs : 40
+Slaves : 
+39
+(
+"nla-gpu2.ianm.kit.edu.3758141"
+"nla-gpu2.ianm.kit.edu.3758142"
+"nla-gpu2.ianm.kit.edu.3758143"
+"nla-gpu2.ianm.kit.edu.3758144"
+"nla-gpu2.ianm.kit.edu.3758145"
+"nla-gpu2.ianm.kit.edu.3758146"
+"nla-gpu2.ianm.kit.edu.3758147"
+"nla-gpu2.ianm.kit.edu.3758148"
+"nla-gpu2.ianm.kit.edu.3758149"
+"nla-gpu2.ianm.kit.edu.3758150"
+"nla-gpu2.ianm.kit.edu.3758151"
+"nla-gpu2.ianm.kit.edu.3758152"
+"nla-gpu2.ianm.kit.edu.3758153"
+"nla-gpu2.ianm.kit.edu.3758154"
+"nla-gpu2.ianm.kit.edu.3758155"
+"nla-gpu2.ianm.kit.edu.3758156"
+"nla-gpu2.ianm.kit.edu.3758157"
+"nla-gpu2.ianm.kit.edu.3758158"
+"nla-gpu2.ianm.kit.edu.3758159"
+"nla-gpu2.ianm.kit.edu.3758160"
+"nla-gpu2.ianm.kit.edu.3758161"
+"nla-gpu2.ianm.kit.edu.3758162"
+"nla-gpu2.ianm.kit.edu.3758163"
+"nla-gpu2.ianm.kit.edu.3758164"
+"nla-gpu2.ianm.kit.edu.3758165"
+"nla-gpu2.ianm.kit.edu.3758166"
+"nla-gpu2.ianm.kit.edu.3758167"
+"nla-gpu2.ianm.kit.edu.3758168"
+"nla-gpu2.ianm.kit.edu.3758169"
+"nla-gpu2.ianm.kit.edu.3758170"
+"nla-gpu2.ianm.kit.edu.3758171"
+"nla-gpu2.ianm.kit.edu.3758172"
+"nla-gpu2.ianm.kit.edu.3758173"
+"nla-gpu2.ianm.kit.edu.3758174"
+"nla-gpu2.ianm.kit.edu.3758175"
+"nla-gpu2.ianm.kit.edu.3758176"
+"nla-gpu2.ianm.kit.edu.3758177"
+"nla-gpu2.ianm.kit.edu.3758178"
+"nla-gpu2.ianm.kit.edu.3758179"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function virtual void Foam::Time::readDict()
+    in file db/Time/TimeIO.C at line 408
+    Reading "/tmp/lidDrivenCavity3D/Variation_mesh/400/Variation_matrix_solver/CG_NoPrecond_HIP/Variation_mpiRank/40/1640704714/system/controlDict" from line 20 to line 52
+    Selecting compressed binary is inefficient and ineffective, resetting to uncompressed binary
+Create mesh for time = 0
+
+Reading transportProperties
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+
+Starting time loop
+
+Time = 0.00025
+
+Courant Number mean: 1.60501e-17 max: 9.71445e-14
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0344293, No Iterations 5
+DILUPBiCGStab:  Solving for Uy:  solution singularity
+DILUPBiCGStab:  Solving for Uz:  solution singularity
+linear solve U 2107676
+nonehipGKOCG:  Solving for p, Initial residual = 1, Final residual = 9.92927e-07, No Iterations 3521
+linear solve p 1015729227
+time step continuity errors : sum local = 6.2575e-11, global = -5.91564e-22, cumulative = -5.91564e-22
+nonehipGKOCG:  Solving for p, Initial residual = 0.84247, Final residual = 1.57048e-07, No Iterations 3641
+linear solve p 286927343
+time step continuity errors : sum local = 1.16418e-11, global = 6.05559e-22, cumulative = 1.39948e-23
+ExecutionTime = 1311.17 s  ClockTime = 1310 s
+
+Time = 0.0005
+
+Courant Number mean: 0.0247672 max: 0.905378
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0982733, Final residual = 0.0231817, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.574704, Final residual = 0.131463, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.91581, Final residual = 0.233484, No Iterations 5
+linear solve U 4232902
+nonehipGKOCG:  Solving for p, Initial residual = 0.944643, Final residual = 9.82166e-07, No Iterations 3481
+linear solve p 271975694
+time step continuity errors : sum local = 2.35365e-10, global = 3.05021e-22, cumulative = 3.19015e-22
+nonehipGKOCG:  Solving for p, Initial residual = 0.898564, Final residual = 9.94271e-07, No Iterations 3476
+linear solve p 269977454
+time step continuity errors : sum local = 2.42948e-10, global = 1.97724e-21, cumulative = 2.29625e-21
+ExecutionTime = 1862.69 s  ClockTime = 1859 s
+
+Time = 0.00075
+
+Courant Number mean: 0.0402349 max: 1.11046
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0632669, Final residual = 0.012292, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.446829, Final residual = 0.0630399, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.816462, Final residual = 0.158758, No Iterations 5
+linear solve U 4155015
+nonehipGKOCG:  Solving for p, Initial residual = 0.971268, Final residual = 1.77433e-07, No Iterations 3615
+linear solve p 286013636
+time step continuity errors : sum local = 6.86458e-11, global = -7.61247e-22, cumulative = 1.53501e-21
+nonehipGKOCG:  Solving for p, Initial residual = 0.933354, Final residual = 1.55446e-07, No Iterations 3601
+linear solve p 281251911
+time step continuity errors : sum local = 6.03421e-11, global = -1.7688e-22, cumulative = 1.35813e-21
+ExecutionTime = 2439.59 s  ClockTime = 2434 s
+
+End
+
+Finalising parallel run
+================================================================================
